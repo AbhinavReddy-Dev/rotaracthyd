@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Rotaract Club of Hyderabad`,
+    description: `An NGO that believes in "Fellowship through service", where club members are like family and work together to server the community, network around the world, learn leadership skills and many more life skills`,
+    author: `Abhinav Reddy`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
