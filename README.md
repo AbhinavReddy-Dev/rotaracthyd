@@ -14,16 +14,16 @@
 - Primary color:
 - Secondary color:
 - Fonts:
-  hfont:
-  pfont:
-  dfont:
+  - hfont:
+  - pfont:
+  - dfont:
 - Font sizes:
-  xlarge:
-  large:
-  medium:
-  small:
-  xsmall:
+  - xlarge:
+  - large:
+  - medium:
+  - small:
+  - xsmall:
 - Font weights:
-  bold:
-  normal:
-  light:
+  - bold:
+  - normal:
+  - light:
