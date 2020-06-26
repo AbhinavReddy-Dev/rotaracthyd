@@ -43,31 +43,29 @@
 
 ### Theme.js details
 
-- Primary-color: #E9025A (pink)
-- Secondary-color: #092448 (dark blue)
-- light-color:
-- dark-color:
-- Box-shadow:
-- Border-radius:
+- PrimaryColor: #E9025A (pink)
+- SecondaryColor: #092448 (dark blue)
+- lightColor: #f2f2f2
+- darkColor: #0d0d0d
 - Fonts:
-  - hfont:
-  - pfont:
-  - dfont:
+  - dfont: Roboto 400
+  - hfont: Lato 700
+  - pfont: Roboto 400
 - Font sizes:
-  - xlarge:
-  - large:
-  - medium:
-  - small:
-  - xsmall:
+  - xlarge: 3em
+  - large: 2em
+  - medium: 1.5em
+  - small: 0.8em
+  - xsmall: 0.5em
 - Font weights:
-  - bold:
-  - normal:
-  - light:
+  - bold: 700
+  - normal: 400
+  - light: 300
+  - black: 900
 - Media queries:
-  - Desktop:
-  - Laptop:
-  - Tablet:
-  - Mobile:
+  - Laptop 13": @media (max-width: 1600px)
+  - Tablet: @media (max-width: 848px)
+  - Mobile: @media (max-width: 420px)
 - Line spacing:
   - Desktop-ls:
   - Laptop-ls:
@@ -78,3 +76,5 @@
   - Laptop-lts:
   - Tablet-lts:
   - Mobile-lts:
+- Box-shadow: 11px 11px 21px -7px rgba(199,199,199,1);
+- Border-radius: 3px
