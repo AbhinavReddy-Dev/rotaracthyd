@@ -1,42 +1,51 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+// import Img from "gatsby-image"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `black`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: `80%`,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h2 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h2>
-    </div>
-  </header>
-)
+import {
+  NavBar,
+  NavContent,
+  NavLinks,
+  NavLink,
+  NavLinkJoin,
+  NavLogo,
+} from "../design/Styles"
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+export const Header = () => {
+  const pinkLogo = useStaticQuery(graphql`
+    query {
+      pinkLogo: file(relativePath: { eq: "pinkLogo.png" }) {
+        publicURL
+      }
+    }
+  `)
+
+  return (
+    <NavBar>
+      <NavContent>
+        <NavLogo to="#home">
+          <img src={pinkLogo.pinkLogo.publicURL} alt="pinkClubLogo" />
+        </NavLogo>
+        <NavLinks>
+          <NavLink to="#about">about</NavLink>
+          <NavLink to="#ourgoal">our goal</NavLink>
+          <NavLink to="#ourwork">our work</NavLink>
+          <NavLink to="#ourteam">our team</NavLink>
+          <NavLink to="#contact">contact</NavLink>
+        </NavLinks>
+        <NavLinkJoin to="#joinus">join us!</NavLinkJoin>
+      </NavContent>
+    </NavBar>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+// Header.propTypes = {
+//   siteTitle: PropTypes.string,
+// }
 
-export default Header
+// Header.defaultProps = {
+//   siteTitle: ``,
+// }
+
+// export default Header

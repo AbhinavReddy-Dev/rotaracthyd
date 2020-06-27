@@ -25,13 +25,13 @@ export default {
     black: "900",
   },
   mediaQuery: {
-    Laptop: "@media (max-width: 1600px)",
-    Tablet: "@media (max-width: 848px)",
-    Mobile: "@media (max-width: 420px)",
+    Laptop: "(max-width: 1600px)",
+    Tablet: "(max-width: 848px)",
+    Mobile: "(max-width: 420px)",
   },
-  boxShadow: "11px 11px 21px -7px rgba(199,199,199,1)",
+  boxShadow: "11px 11px 21px -7px rgba(199,199,199,2)",
   //   -moz-box-shadow: 11px 11px 21px -7px rgba(199,199,199,1);
   //   box-shadow: 11px 11px 21px -7px rgba(199,199,199,1);",
   borderRadius: "3px",
-  letterSpacing: ".5em",
+  letterSpacing: "",
 }
