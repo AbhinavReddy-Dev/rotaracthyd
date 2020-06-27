@@ -12,11 +12,11 @@ export default {
     pFont: "Roboto",
   },
   fontSize: {
-    xlarge: "3em",
-    large: "2em",
+    xlarge: "2.8em",
+    large: "2.2em",
     medium: "1.5em",
-    small: "0.8em",
-    xsmall: "0.5em",
+    small: "1em",
+    xsmall: "0.8em",
   },
   fontWeight: {
     bold: "700",

@@ -11,11 +11,11 @@ body, html {
 font-family: ${props => props.theme.fonts.dFont};
 height: 100%;
 background-color: ${props => props.theme.colors.lightColor}; 
+scroll-behavior:smooth;
 }
-h1{
+h1, h2, h3, h4, h5, h6{
     font-family:${props => props.theme.fonts.hFont};
     font-weight: ${props => props.theme.fontWeight.bold};
-    padding: 20px 0px;
 }
 `
 export const Container = styled.section`
@@ -43,18 +43,22 @@ export const NavLinks = styled(NavContent)`
 `
 
 export const NavLink = styled(Link)`
-  color: ${props => props.theme.colors.darkColor};
+  color: ${props => props.theme.colors.secondaryColor};
   text-decoration: none;
   text-transform: uppercase;
-  font-size: ${props => props.theme.fontSize.small};
-  font-weight: ${props => props.theme.fontWeight.bold};
+  font-size: ${props => props.theme.fontSize.xsmall};
+  font-weight: ${props => props.theme.fontWeight.normal};
   letter-spacing: 1px;
   padding: 0px 5px;
   &:hover {
+    transition: 0.2s ease-in-out;
     border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
   }
   .active {
     color: ${props => props.theme.colors.primaryColor};
+  }
+  @media ${props => props.theme.mediaQuery.Laptop} {
+    font-size: ${props => props.theme.fontSize.xsmall};
   }
 `
 export const NavLinkJoin = styled(NavLink)`
@@ -64,11 +68,12 @@ export const NavLinkJoin = styled(NavLink)`
   text-decoration: none;
   text-transform: uppercase;
   padding: 6px 30px;
-  font-size: ${props => props.theme.fontSize.small};
   font-weight: ${props => props.theme.fontWeight.bold};
   border: 2px solid ${props => props.theme.colors.primaryColor};
   border-radius: 25px;
+  transition: 0.3s ease-out;
   &:hover {
+    transition: 0.3s ease-in;
     color: ${props => props.theme.colors.primaryColor};
     border: 2px solid ${props => props.theme.colors.primaryColor};
     background-color: ${props => props.theme.colors.bgColor};
@@ -87,7 +92,65 @@ export const NavLogo = styled(Link)`
   }
 `
 export const LandingImage = styled.section`
-  /* position: fixed; */
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #092448;
+    opacity: 0.8;
+  }
+`
+export const LandingContent = styled.section`
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  bottom: 40%;
+  right: 50%;
+  transform: translateX(50%);
+  color: #fff;
+  text-align: center;
+  .content-wrap {
+    margin: 0 auto;
+    width: 34%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  h1 {
+    margin: 0;
+    font-weight: ${props => props.theme.fontWeight.black};
+    font-size: ${props => props.theme.fontSize.xlarge};
+    word-spacing: 15px;
+  }
+  h3 {
+    margin-top: 15px;
+    font-weight: ${props => props.theme.fontWeight.light};
+    font-size: ${props => props.theme.fontSize.medium};
+    word-spacing: 5px;
+  }
+  h4 {
+    font-weight: ${props => props.theme.fontWeight.normal};
+    font-size: ${props => props.theme.fontSize.medium};
+  }
+  @media ${props => props.theme.mediaQuery.Laptop} {
+    bottom: 35%;
+    h1 {
+      font-size: ${props => props.theme.fontSize.large};
+    }
+    h3 {
+      font-size: ${props => props.theme.fontSize.medium};
+    }
+    h4 {
+      font-size: ${props => props.theme.fontSize.medium};
+    }
+    .content-wrap {
+      width: 45%;
+    }
+  }
 `
 
 // ${props => props.theme.};
