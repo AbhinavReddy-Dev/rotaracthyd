@@ -30,7 +30,8 @@ export const NavBar = styled.header`
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 0.8rem rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.boxShadowLite};
+  transition: 0.5s ease-in;
   &.scrolling-active {
     background-color: ${props => props.theme.colors.primaryColor};
     img {
@@ -57,6 +58,7 @@ export const NavLink = styled(Link)`
   font-weight: ${props => props.theme.fontWeight.normal};
   letter-spacing: 1px;
   padding: 0px 10px;
+  transition: 0.5s ease-in;
   &:after {
     display: block;
     content: "";
@@ -74,6 +76,11 @@ export const NavLink = styled(Link)`
   }
   ${NavBar}.scrolling-active & {
     color: ${props => props.theme.colors.bgColor};
+    font-weight: ${props => props.theme.fontWeight.bold};
+
+    &:after {
+      border-bottom: 2px solid ${props => props.theme.colors.bgColor};
+    }
   }
   @media ${props => props.theme.mediaQuery.Laptop} {
     font-size: ${props => props.theme.fontSize.xsmall};
@@ -86,7 +93,7 @@ export const NavLinkJoin = styled(NavLink)`
   text-decoration: none;
   text-transform: uppercase;
   padding: 6px 30px;
-  font-weight: ${props => props.theme.fontWeight.bold};
+  font-weight: ${props => props.theme.fontWeight.black};
   border: 2px solid ${props => props.theme.colors.primaryColor};
   border-radius: 25px;
   transition: 0.3s ease-out;
@@ -114,6 +121,7 @@ export const NavLinkJoin = styled(NavLink)`
 `
 export const NavLogo = styled(Link)`
   margin: 0;
+  transition: 0.3s ease-in;
   img {
     max-height: 2.5rem;
   }

@@ -30,6 +30,7 @@ export default {
     Mobile: "(max-width: 420px)",
   },
   boxShadow: "11px 11px 21px -7px rgba(199,199,199,2)",
+  boxShadowLite: "0 2px 0.8rem rgba(0, 0, 0, 0.1)",
   //   -moz-box-shadow: 11px 11px 21px -7px rgba(199,199,199,1);
   //   box-shadow: 11px 11px 21px -7px rgba(199,199,199,1);",
   borderRadius: "3px",
