@@ -30,6 +30,13 @@ export const NavBar = styled.header`
   position: sticky;
   top: 0;
   z-index: 10;
+  box-shadow: 0 2px 0.8rem rgba(0, 0, 0, 0.1);
+  &.scrolling-active {
+    background-color: ${props => props.theme.colors.primaryColor};
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
 `
 export const NavContent = styled(Container)`
   display: flex;
@@ -49,13 +56,24 @@ export const NavLink = styled(Link)`
   font-size: ${props => props.theme.fontSize.xsmall};
   font-weight: ${props => props.theme.fontWeight.normal};
   letter-spacing: 1px;
-  padding: 0px 5px;
-  &:hover {
-    transition: 0.2s ease-in-out;
+  padding: 0px 10px;
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    transition: transform 350ms ease-in-out;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+  }
+
+  &.active {
     border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
   }
-  .active {
-    color: ${props => props.theme.colors.primaryColor};
+  ${NavBar}.scrolling-active & {
+    color: ${props => props.theme.colors.bgColor};
   }
   @media ${props => props.theme.mediaQuery.Laptop} {
     font-size: ${props => props.theme.fontSize.xsmall};
@@ -79,12 +97,27 @@ export const NavLinkJoin = styled(NavLink)`
     background-color: ${props => props.theme.colors.bgColor};
     box-shadow: ${props => props.theme.boxShadow};
   }
+  &:after {
+    border-bottom: none;
+  }
+  ${NavBar}.scrolling-active & {
+    color: ${props => props.theme.colors.primaryColor};
+    background-color: ${props => props.theme.colors.bgColor};
+    border: 2px solid ${props => props.theme.colors.bgColor};
+    &:hover {
+      color: ${props => props.theme.colors.bgColor};
+      border: 2px solid ${props => props.theme.colors.bgColor};
+      background-color: ${props => props.theme.colors.primaryColor};
+      box-shadow: none;
+    }
+  }
 `
 export const NavLogo = styled(Link)`
   margin: 0;
   img {
     max-height: 2.5rem;
   }
+
   @media ${props => props.theme.mediaQuery.Mobile} {
     img {
       max-height: 2rem;

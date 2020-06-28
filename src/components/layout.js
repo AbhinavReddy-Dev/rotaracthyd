@@ -8,11 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Container } from "../design/Styles"
 import { Header } from "./Header"
 import { Footer } from "./Footer"
-import { LandingPage } from "./LandingPage"
-
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -29,10 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <LandingPage></LandingPage>
-      <Container>
-        <main>{children}</main>
-      </Container>
+      <main>{children}</main>
       <Footer></Footer>
     </>
   )

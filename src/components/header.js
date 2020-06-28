@@ -24,17 +24,19 @@ export const Header = () => {
   return (
     <NavBar>
       <NavContent>
-        <NavLogo to="#home">
+        <NavLogo to="/">
           <img src={pinkLogo.pinkLogo.publicURL} alt="pinkClubLogo" />
         </NavLogo>
         <NavLinks>
-          <NavLink to="#about">about</NavLink>
-          <NavLink to="#ourgoal">our goal</NavLink>
-          <NavLink to="#ourwork">our work</NavLink>
-          <NavLink to="#ourteam">our team</NavLink>
-          <NavLink to="#contact">contact</NavLink>
+          <NavLink to="/#about" activeClassName="active">
+            about
+          </NavLink>
+          <NavLink to="/#ourgoal">our goal</NavLink>
+          <NavLink to="/#ourwork">our work</NavLink>
+          <NavLink to="/#ourteam">our team</NavLink>
+          <NavLink to="/#contact">contact</NavLink>
         </NavLinks>
-        <NavLinkJoin to="#joinus">join us!</NavLinkJoin>
+        <NavLinkJoin to="/page-2/">join us!</NavLinkJoin>
       </NavContent>
     </NavBar>
   )
