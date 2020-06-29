@@ -117,6 +117,9 @@ export const NavLinkJoin = styled(NavLink)`
       background-color: ${props => props.theme.colors.primaryColor};
       box-shadow: none;
     }
+    &:after {
+      border-bottom: none;
+    }
   }
 `
 export const NavLogo = styled(Link)`
@@ -134,7 +137,10 @@ export const NavLogo = styled(Link)`
 `
 export const LandingImage = styled.section`
   position: relative;
-  &:after {
+  .landingImg img {
+    position: fixed;
+  }
+  .landingImg:after {
     content: "";
     position: absolute;
     top: 0;

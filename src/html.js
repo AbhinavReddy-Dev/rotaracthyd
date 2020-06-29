@@ -29,6 +29,12 @@ export default function HTML(props) {
               let windowPosition = window.scrollY > 0;
               header.classList.toggle('scrolling-active', windowPosition);
           })
+          window.addEventListener('scroll', function () {
+            let parallax = document.querySelector('.parallax');
+            let scrollPosition = window.pageYOffset;
+            console.log(scrollPosition);
+            parallax.style.transform = "translateY(" + scrollPosition * 0.5 +"px)";
+          });
 `,
           }}
         />

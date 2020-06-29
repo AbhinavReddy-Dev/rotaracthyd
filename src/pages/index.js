@@ -16,7 +16,7 @@ const IndexPage = () => (
     <Layout>
       <SEO title="Rotaract Club of Hyderabad" />
       <LandingPage></LandingPage>
-      <Container>
+      <Container style={{ zIndex: 15 }}>
         <HeaderText id="about">Hi people</HeaderText>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>

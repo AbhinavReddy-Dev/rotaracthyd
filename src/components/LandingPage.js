@@ -17,7 +17,10 @@ export const LandingPage = () => {
   `)
   return (
     <LandingImage>
-      <Img fluid={landingImage.landingImage.childImageSharp.fluid} />
+      <Img
+        className="landingImg"
+        fluid={landingImage.landingImage.childImageSharp.fluid}
+      />
       <LandingContent>
         <h1>ROTARACT CLUB OF HYDERABAD</h1>
         <h3>53 Years of changing lives</h3>
