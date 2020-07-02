@@ -28,13 +28,21 @@ export const Header = () => {
           <img src={pinkLogo.pinkLogo.publicURL} alt="pinkClubLogo" />
         </NavLogo>
         <NavLinks>
-          <NavLink to="/#about" activeClassName="active">
+          <NavLink className="about" to="/#about" activeClassName="active">
             about
           </NavLink>
-          <NavLink to="/#ourgoal">our goal</NavLink>
-          <NavLink to="/#ourwork">our work</NavLink>
-          <NavLink to="/#ourteam">our team</NavLink>
-          <NavLink to="/#contact">contact</NavLink>
+          <NavLink className="ourgoal" to="/#ourgoal" activeClassName="active">
+            our goal
+          </NavLink>
+          <NavLink className="ourwork" to="/#ourwork" activeClassName="active">
+            our work
+          </NavLink>
+          <NavLink className="ourteam" to="/#ourteam" activeClassName="active">
+            our team
+          </NavLink>
+          <NavLink className="contact" to="/#contact" activeClassName="active">
+            contact
+          </NavLink>
         </NavLinks>
         <NavLinkJoin to="/page-2/">join us!</NavLinkJoin>
       </NavContent>

@@ -21,7 +21,8 @@ h1, h2, h3, h4, h5, h6{
 export const Container = styled.section`
   margin: 0 auto;
   width: 80%;
-  padding: 10px 0px;
+  padding: 10px 5px;
+  position: relative;
 `
 export const NavBar = styled.header`
   width: 100%;
@@ -31,11 +32,14 @@ export const NavBar = styled.header`
   top: 0;
   z-index: 10;
   box-shadow: ${props => props.theme.boxShadowLite};
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
   &.scrolling-active {
     background-color: ${props => props.theme.colors.primaryColor};
+    height: 3rem;
+
     img {
       filter: brightness(0) invert(1);
+      height: 2rem;
     }
   }
 `
@@ -44,6 +48,10 @@ export const NavContent = styled(Container)`
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
+  padding: 10px 0px;
+  ${NavBar}.scrolling-active & {
+    padding: 7px 0px;
+  }
 `
 export const NavLinks = styled(NavContent)`
   width: 50%;
@@ -82,8 +90,12 @@ export const NavLink = styled(Link)`
       border-bottom: 2px solid ${props => props.theme.colors.bgColor};
     }
   }
+
   @media ${props => props.theme.mediaQuery.Laptop} {
     font-size: ${props => props.theme.fontSize.xsmall};
+    ${NavBar}.scrolling-active & {
+      font-weight: ${props => props.theme.fontWeight.normal};
+    }
   }
 `
 export const NavLinkJoin = styled(NavLink)`
@@ -111,6 +123,9 @@ export const NavLinkJoin = styled(NavLink)`
     color: ${props => props.theme.colors.primaryColor};
     background-color: ${props => props.theme.colors.bgColor};
     border: 2px solid ${props => props.theme.colors.bgColor};
+    padding: 5px 20px;
+    font-weight: ${props => props.theme.fontWeight.bold};
+
     &:hover {
       color: ${props => props.theme.colors.bgColor};
       border: 2px solid ${props => props.theme.colors.bgColor};
@@ -138,7 +153,7 @@ export const NavLogo = styled(Link)`
 export const LandingImage = styled.section`
   position: relative;
   .landingImg img {
-    position: fixed;
+    position: relative;
   }
   .landingImg:after {
     content: "";
@@ -197,6 +212,29 @@ export const LandingContent = styled.section`
     .content-wrap {
       width: 45%;
     }
+  }
+`
+export const AboutSection = styled(Container)`
+  background-color: ${props => props.theme.colors.bgColor};
+  padding-left: 0px;
+  padding-right: 0px;
+  z-index: 2;
+  &:before {
+    content: "About";
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -25%;
+    height: 25%;
+    width: 100%;
+    background-color: ${props => props.theme.colors.bgColor};
+    font-family: ${props => props.theme.fonts.hFont};
+    font-weight: ${props => props.theme.fontWeight.bold};
+    font-size: ${props => props.theme.fontSize.xlarge};
+    text-transform: uppercase;
+    /* border: 2px black solid; */
+    /* z-index: 0; */
   }
 `
 
