@@ -34,11 +34,11 @@ export const Header = () => {
           <NavLink className="ourgoal" to="/#ourgoal" activeClassName="active">
             our goal
           </NavLink>
-          <NavLink className="ourwork" to="/#ourwork" activeClassName="active">
-            our work
-          </NavLink>
           <NavLink className="ourteam" to="/#ourteam" activeClassName="active">
             our team
+          </NavLink>
+          <NavLink className="ourwork" to="/#ourwork" activeClassName="active">
+            our work
           </NavLink>
           <NavLink className="contact" to="/#contact" activeClassName="active">
             contact
