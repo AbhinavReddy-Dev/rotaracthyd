@@ -227,6 +227,7 @@ export const AboutSection = styled(Container)`
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 2rem;
   h1 {
     word-spacing: 20px;
     font-family: ${props => props.theme.fonts.hFont};
@@ -242,7 +243,7 @@ export const AboutSection = styled(Container)`
     max-height: 5rem;
     max-width: 5rem;
     @media ${props => props.theme.mediaQuery.Laptop} {
-      top: -8.5%;
+      top: -8%;
     }
   }
 `
@@ -260,10 +261,14 @@ export const AboutContent = styled.section`
   p {
     line-height: 2em;
     font-size: ${props => props.theme.fontSize.small};
+    @media ${props => props.theme.mediaQuery.Laptop} {
+      font-size: ${props => props.theme.fontSize.xsmall};
+    }
   }
 `
 export const OurGoalSection = styled(Container)`
   text-align: center;
+  margin-top: 3rem;
   p {
     margin-top: 2rem;
     font-weight: ${props => props.theme.fontWeight.light};
@@ -279,26 +284,40 @@ export const OurGoalCardSection = styled.section`
 
 export const OurGoalCard = styled.div`
   height: 15rem;
-  width: 35rem;
-  margin: 3rem 0 0 0;
+  width: 38rem;
+  margin: 3rem 1rem 0 1rem;
   border: solid 2px pink;
   position: relative;
   transition: 0.1s ease-in-out;
+  @media ${props => props.theme.mediaQuery.Laptop} {
+    height: 12rem;
+    width: 25rem;
+    h3{
+    font-size: ${props => props.theme.fontSize.small};
+    }
+  }
+  :before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${props => props.theme.colors.secondaryColor};
+    opacity: 0.7;
+  }
   h3{
+    color: white;
     text-transform: uppercase;
     margin: 0;
-  padding: 0 2rem;
-  line-height: 2em;
+    padding: 0 2rem;
+    line-height: 2em;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    word-spacing: 15px;
-
-  }
-  p {
-    color: ${props => props.theme.colors.secondaryColor};
+    word-spacing: 8px;
   }
   :hover {
     box-shadow: ${props => props.theme.boxShadow};
@@ -306,8 +325,8 @@ export const OurGoalCard = styled.div`
   :hover:after{
       transition: 0.5s ease-in-out;
       color: white;
-    line-height: 2em;
-      background-color: pink;
+      line-height: 2em;
+      background-color: palevioletred;
       padding: 1rem;
       display: flex;
       align-items: center;
@@ -316,44 +335,84 @@ export const OurGoalCard = styled.div`
       top: 0;
       left: 0;
       height: 100%;
+      @media ${props => props.theme.mediaQuery.Laptop} {
+    font-size: ${props => props.theme.fontSize.xsmall};
+      }
   }
   &:nth-child(1) {
+    background-image:url(https://www.rotary.org/sites/default/files/styles/w_2800/public/peace%20hero.jpg?itok=D9BbOHiP);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     &:hover:after {
       content: "${props => props.theme.promotingPeace}";
     }
   }
   &:nth-child(2) {
+    background-image: url(https://www.rotary.org/sites/default/files/styles/w_2160/public/cause%20disease%20hero%202800x1800.JPG?itok=i7HJ73tH);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     &:hover:after {
       content: "${props => props.theme.fightingDisease}";
     }
   }
   &:nth-child(3) {
+    background-image: url(https://www.rotary.org/sites/default/files/styles/w_2160/public/new%20water%20hero%202.jpg?itok=kuIJmchv);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     &:hover:after {
       content: "${props => props.theme.providingCWSH}";
     }
   }
   &:nth-child(4) {
+    background-image: url(https://www.rotary.org/sites/default/files/styles/w_2160/public/cause%20women%20hero%202800x1800.jpg?itok=raWI45Jk);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     &:hover:after {
       content: "${props => props.theme.savingMothersnChildren}";
     }
   }
   &:nth-child(5) {
+    background-image: url(https://www.rotary.org/sites/default/files/styles/w_2160/public/cause%20education%20hero%202800x1800.JPG?itok=w0FpiBY2);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     &:hover:after {
       content: "${props => props.theme.supportingEducation}";
     }
   }
   &:nth-child(6) {
+    background-image: url(https://www.rotary.org/sites/default/files/styles/w_350/public/cause%20CI%20economy%20700x500.JPG?itok=rPMD-Yn-);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     &:hover:after {
       content: "${props => props.theme.growingLocalEcon}";
     }
   }
   &:nth-child(7) {
+    background-image: url(https://www.rotary.org/sites/default/files/styles/w_2160/public/Area_of_focus_Environment_Hero_SHU1317118457.jpg?itok=ja7KYpRM);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     &:hover:after {
       content: "${props => props.theme.supportingEnvironment}";
     }
-    width: 50rem;
   }
-  
+`
+
+export const FooterSection = styled.footer`
+  height: 10rem;
+  width: 100%;
+  margin: 2.5rem 0 auto;
+  background-color: ${props => props.theme.colors.secondaryColor};
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 // ${props => props.theme.};

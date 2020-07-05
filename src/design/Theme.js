@@ -16,7 +16,7 @@ export default {
     large: "2.2em",
     medium: "1.5em",
     small: "1em",
-    xsmall: "0.8em",
+    xsmall: "0.9em",
   },
   fontWeight: {
     bold: "700",

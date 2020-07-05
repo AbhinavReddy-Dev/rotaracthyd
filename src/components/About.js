@@ -1,7 +1,6 @@
 import React from "react"
 import { AboutSection, AboutHeader, AboutContent } from "../design/Styles"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
 export const About = () => {
   const rotaryLogo = useStaticQuery(graphql`
