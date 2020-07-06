@@ -9,8 +9,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Rotaract Club of Hyderabad" />
     <LandingPage />
-    <About />
     <hr />
+    <About />
+    <hr id="ourgoal" />
     <OurGoal />
   </Layout>
 )

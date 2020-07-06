@@ -11,8 +11,12 @@ export const About = () => {
     }
   `)
   return (
-    <AboutSection id="about">
-      <img src={rotaryLogo.rotaryLogo.publicURL} alt="Rotary wheel"></img>
+    <AboutSection>
+      <img
+        id="about"
+        src={rotaryLogo.rotaryLogo.publicURL}
+        alt="Rotary wheel"
+      ></img>
       <AboutHeader>
         <p>Learn more</p>
         <h1>About Us</h1>

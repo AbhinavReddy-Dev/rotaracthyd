@@ -17,6 +17,7 @@ export default {
     medium: "1.5em",
     small: "1em",
     xsmall: "0.9em",
+    xxsmall: "0.7em",
   },
   fontWeight: {
     bold: "700",
@@ -36,7 +37,7 @@ export default {
   borderRadius: "3px",
   letterSpacing: "",
   promotingPeace:
-    "Rotary encourages conversations to foster understanding within and across cultures. We train adults and young leaders to prevent and mediate conflict and help refugees who have fled dangerous areas.",
+    "We encourage conversations to foster understanding within and across cultures. We train adults and young leaders to prevent and mediate conflict and help refugees who have fled dangerous areas.",
   fightingDisease:
     "We educate and equip communities to stop the spread of life-threatening diseases like polio, HIV/AIDS, and malaria. We improve and expand access to low-cost and free health care in developing areas.",
   providingCWSH:

@@ -7,7 +7,7 @@ import {
 
 export const OurGoal = () => {
   return (
-    <OurGoalSection id="ourgoal">
+    <OurGoalSection>
       <h1>Our Goal</h1>
       <p>We have 7 areas of focus for the better future of the world...</p>
       <OurGoalCardSection>

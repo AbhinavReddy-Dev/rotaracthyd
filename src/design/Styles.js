@@ -31,7 +31,7 @@ export const NavBar = styled.header`
   position: absolute;
   top: 0;
   z-index: 10;
-  transition: 0.4s ease-in;
+  transition: 0.3s ease-in;
   img {
     filter: brightness(0) invert(1);
   }
@@ -67,7 +67,7 @@ export const NavLink = styled(Link)`
   font-size: ${props => props.theme.fontSize.xsmall};
   font-weight: ${props => props.theme.fontWeight.normal};
   letter-spacing: 1px;
-  transition: 0.8s ease-in;
+  /* transition: 0.8s ease-in; */
   &:after {
     display: block;
     content: "";
@@ -95,6 +95,8 @@ export const NavLink = styled(Link)`
   @media ${props => props.theme.mediaQuery.Laptop} {
     font-size: ${props => props.theme.fontSize.xsmall};
     ${NavBar}.scrolling-active & {
+      font-size: ${props => props.theme.fontSize.xxsmall};
+
       font-weight: ${props => props.theme.fontWeight.normal};
     }
   }
@@ -109,7 +111,7 @@ export const NavLinkJoin = styled(NavLink)`
   font-weight: ${props => props.theme.fontWeight.black};
   border: 2px solid ${props => props.theme.colors.bgColor};
   border-radius: 25px;
-  transition: 0.8s ease-out;
+  transition: 0.4s ease-out;
   &:hover {
     transition: 0.3s ease-in;
     color: ${props => props.theme.colors.primaryColor};
@@ -125,6 +127,7 @@ export const NavLinkJoin = styled(NavLink)`
     background-color: ${props => props.theme.colors.bgColor};
     border: 2px solid ${props => props.theme.colors.primaryColor};
     font-weight: ${props => props.theme.fontWeight.bold};
+    padding: 4px 20px;
 
     &:hover {
       color: ${props => props.theme.colors.bgColor};
@@ -147,7 +150,7 @@ export const NavLogo = styled(Link)`
 
   @media ${props => props.theme.mediaQuery.Mobile} {
     img {
-      max-height: 2rem;
+      max-height: 1.8rem;
     }
   }
 `
@@ -229,7 +232,7 @@ export const AboutSection = styled(Container)`
   position: relative;
   margin-bottom: 2rem;
   h1 {
-    word-spacing: 20px;
+    word-spacing: 10px;
     font-family: ${props => props.theme.fonts.hFont};
     font-weight: ${props => props.theme.fontWeight.bold};
     font-size: ${props => props.theme.fontSize.large};
@@ -237,13 +240,13 @@ export const AboutSection = styled(Container)`
   }
   img {
     position: absolute;
-    top: -8.5%;
+    top: -13.5%;
     left: 50%;
     transform: translateX(-50%);
     max-height: 5rem;
     max-width: 5rem;
     @media ${props => props.theme.mediaQuery.Laptop} {
-      top: -8%;
+      top: -12.8%;
     }
   }
 `
@@ -269,6 +272,11 @@ export const AboutContent = styled.section`
 export const OurGoalSection = styled(Container)`
   text-align: center;
   margin-top: 3rem;
+  h1 {
+    word-spacing: 10px;
+
+    text-transform: uppercase;
+  }
   p {
     margin-top: 2rem;
     font-weight: ${props => props.theme.fontWeight.light};
@@ -325,9 +333,9 @@ export const OurGoalCard = styled.div`
   :hover:after{
       transition: 0.5s ease-in-out;
       color: white;
-      line-height: 2em;
+      line-height: 1.5em;
       background-color: palevioletred;
-      padding: 1rem;
+      padding: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -405,16 +413,57 @@ export const OurGoalCard = styled.div`
 `
 
 export const FooterSection = styled.footer`
-  height: 10rem;
+  max-height: 50rem;
   width: 100%;
   margin: 2.5rem 0 auto;
   background-color: ${props => props.theme.colors.secondaryColor};
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `
-
+export const ContactUsForm = styled.form`
+  margin: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  color: ${props => props.theme.colors.secondaryColor};
+  font-size: ${props => props.theme.fontSize.xsmall};
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.7rem;
+  }
+  input,
+  textarea {
+    margin-top: 0.4rem;
+    padding: 0.5em;
+    width: 20rem;
+    font-weight: ${props => props.theme.fontWeight.light};
+  }
+  input[type="text"],
+  input[type="email"] {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1.5px solid ${props => props.theme.colors.primaryColor};
+    height: 2rem;
+  }
+  textarea {
+    height: 5rem;
+    border: none;
+    border-bottom: 1.5px solid ${props => props.theme.colors.primaryColor};
+  }
+  input[type="submit"] {
+    background-color: #3cbc8d;
+    color: white;
+    margin-top: 1.5rem;
+    padding: 0.5em;
+    width: 8rem;
+    border: none;
+  }
+`
 // ${props => props.theme.};
 
 // @media ${props => props.theme.mediaQuery.Laptop} { }
