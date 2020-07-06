@@ -413,47 +413,63 @@ export const OurGoalCard = styled.div`
 `
 
 export const FooterSection = styled.footer`
-  max-height: 50rem;
+  max-height: 60rem;
   width: 100%;
   margin: 2.5rem 0 auto;
   background-color: ${props => props.theme.colors.secondaryColor};
   color: white;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 `
 export const ContactUsForm = styled.form`
-  margin: 1.5rem;
+  margin: 3rem 1.5rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
+  border-radius: 6px;
   color: ${props => props.theme.colors.secondaryColor};
   font-size: ${props => props.theme.fontSize.xsmall};
+  padding-top: 0;
+  h3 {
+    margin: 0 0 0.5rem 0;
+    align-self: center;
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+    font-weight: ${props => props.theme.fontWeight.normal};
+    letter-spacing: 0.1em;
+  }
   label {
     display: flex;
     flex-direction: column;
-    margin-top: 0.7rem;
+    margin-top: 0.8rem;
   }
   input,
   textarea {
-    margin-top: 0.4rem;
     padding: 0.5em;
     width: 20rem;
     font-weight: ${props => props.theme.fontWeight.light};
+    padding-left: 0;
+  }
+  ::placeholder {
+    font-size: ${props => props.theme.fontSize.xxsmall};
+    color: lightblue;
+    opacity: 0.8;
   }
   input[type="text"],
   input[type="email"] {
     box-sizing: border-box;
     border: none;
-    border-bottom: 1.5px solid ${props => props.theme.colors.primaryColor};
-    height: 2rem;
+    border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
+    height: 1.8rem;
   }
   textarea {
-    height: 5rem;
+    height: 4rem;
     border: none;
-    border-bottom: 1.5px solid ${props => props.theme.colors.primaryColor};
+    border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
   }
   input[type="submit"] {
     background-color: #3cbc8d;
@@ -462,6 +478,11 @@ export const ContactUsForm = styled.form`
     padding: 0.5em;
     width: 8rem;
     border: none;
+    font-weight: ${props => props.theme.fontWeight.normal};
+    cursor: pointer;
+    :hover {
+      opacity: 0.8;
+    }
   }
 `
 // ${props => props.theme.};
