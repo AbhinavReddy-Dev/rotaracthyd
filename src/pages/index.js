@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import { About } from "../components/About"
 import { LandingPage } from "../components/LandingPage"
 import { OurGoal } from "../components/OurGoal"
+import { Contact } from "../components/Contact"
+
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -11,8 +13,8 @@ const IndexPage = () => (
     <LandingPage />
     <hr />
     <About />
-    <hr id="ourgoal" />
     <OurGoal />
+    <Contact />
   </Layout>
 )
 

@@ -25,6 +25,17 @@ export const Container = styled.section`
   padding: 10px 5px;
   position: relative;
 `
+export const SectionWrapper = styled.div`
+  background-color: ${props => props.bgcolor};
+  &#contact {
+    h1 {
+      word-spacing: 10px;
+      text-transform: uppercase;
+      padding-bottom: 2rem;
+      color: white;
+    }
+  }
+`
 export const NavBar = styled.header`
   width: 100%;
   height: 3.6rem;
@@ -108,7 +119,7 @@ export const NavLinkJoin = styled(NavLink)`
   text-decoration: none;
   text-transform: uppercase;
   padding: 6px 30px;
-  font-weight: ${props => props.theme.fontWeight.black};
+  font-weight: ${props => props.theme.fontWeight.bold};
   border: 2px solid ${props => props.theme.colors.bgColor};
   border-radius: 25px;
   transition: 0.4s ease-out;
@@ -126,7 +137,7 @@ export const NavLinkJoin = styled(NavLink)`
     color: ${props => props.theme.colors.primaryColor};
     background-color: ${props => props.theme.colors.bgColor};
     border: 2px solid ${props => props.theme.colors.primaryColor};
-    font-weight: ${props => props.theme.fontWeight.bold};
+    font-weight: ${props => props.theme.fontWeight.normal};
     padding: 4px 20px;
 
     &:hover {
@@ -269,12 +280,13 @@ export const AboutContent = styled.section`
     }
   }
 `
+
 export const OurGoalSection = styled(Container)`
   text-align: center;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
   h1 {
     word-spacing: 10px;
-
     text-transform: uppercase;
   }
   p {
@@ -412,19 +424,26 @@ export const OurGoalCard = styled.div`
   }
 `
 
-export const FooterSection = styled.footer`
-  max-height: 60rem;
+export const ContactSection = styled(Container)`
   width: 100%;
-  margin: 2.5rem 0 auto;
-  background-color: ${props => props.theme.colors.secondaryColor};
+  margin: 0 auto;
+  padding: 5rem 5rem;
   color: white;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  p {
+    width: 30rem;
+    line-height: 2em;
+    font-weight: ${props => props.theme.fontWeight.light};
+    span {
+      border-bottom: 4px solid ${props => props.theme.colors.primaryColor};
+    }
+  }
 `
 export const ContactUsForm = styled.form`
-  margin: 3rem 1.5rem;
+  margin: 1rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -440,7 +459,7 @@ export const ContactUsForm = styled.form`
     padding: 1.5rem 0;
     text-transform: uppercase;
     font-weight: ${props => props.theme.fontWeight.normal};
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
   }
   label {
     display: flex;
@@ -484,6 +503,13 @@ export const ContactUsForm = styled.form`
       opacity: 0.8;
     }
   }
+`
+export const FooterSection = styled.footer`
+  height: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 `
 // ${props => props.theme.};
 
