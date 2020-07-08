@@ -27,6 +27,9 @@ export const Container = styled.section`
 `
 export const SectionWrapper = styled.div`
   background-color: ${props => props.bgcolor};
+  display: ${props => props.display};
+  flex-direction: ${props => props.flexDirection};
+  flex-wrap: ${props => props.flexWrap};
   &#contact {
     h1 {
       word-spacing: 10px;
@@ -35,6 +38,13 @@ export const SectionWrapper = styled.div`
       color: white;
     }
   }
+`
+export const Div = styled.div`
+  background-color: ${props => props.bgcolor};
+  display: ${props => props.display};
+  flex-direction: ${props => props.flexDirection};
+  flex-wrap: ${props => props.flexWrap};
+  justify-content: ${props => props.justifyContent};
 `
 export const NavBar = styled.header`
   width: 100%;
@@ -272,6 +282,7 @@ export const AboutHeader = styled.div`
 export const AboutContent = styled.section`
   width: 100%;
   margin: 0 auto;
+
   p {
     line-height: 2em;
     font-size: ${props => props.theme.fontSize.small};
@@ -505,10 +516,33 @@ export const ContactUsForm = styled.form`
   }
 `
 export const FooterSection = styled.footer`
-  height: 4rem;
+  display: ${props => props.display};
+  flex-direction: ${props => props.flexDirection};
+  flex-wrap: ${props => props.flexWrap};
+  justify-content: space-evenly;
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  h4 {
+    font-weight: ${props => props.theme.fontWeight.normal};
+  }
+`
+export const SocialMedia = styled(Div)`
+  width: 10rem;
+  img {
+    width: 1.5rem;
+    :hover {
+      opacity: 0.7;
+    }
+  }
+`
+export const CopyRight = styled.p`
+  margin: 0;
+  padding: 1rem;
+  background-color: ${props => props.bgcolor};
+  display: ${props => props.display};
+  flex-wrap: ${props => props.flexWrap};
   justify-content: center;
 `
 // ${props => props.theme.};

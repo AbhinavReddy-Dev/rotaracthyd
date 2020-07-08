@@ -21,6 +21,7 @@ export const About = () => {
         <p>Learn more</p>
         <h1>About Us</h1>
       </AboutHeader>
+
       <AboutContent>
         <p>
           Rotaract clubs were founded in 1968 by Rotary International, a
