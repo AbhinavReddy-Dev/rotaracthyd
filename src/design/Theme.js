@@ -16,8 +16,8 @@ export default {
     large: "2.2em",
     medium: "1.5em",
     small: "1em",
-    xsmall: "0.9em",
-    xxsmall: "0.7em",
+    xsmall: "0.8em",
+    xxsmall: "0.75em",
   },
   fontWeight: {
     bold: "700",

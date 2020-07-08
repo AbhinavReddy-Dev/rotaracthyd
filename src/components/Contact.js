@@ -1,5 +1,10 @@
 import React from "react"
-import { SectionWrapper, ContactSection, ContactUsForm } from "../design/Styles"
+import {
+  SectionWrapper,
+  ContactSection,
+  ContactContent,
+  ContactUsForm,
+} from "../design/Styles"
 export const Contact = () => {
   return (
     <SectionWrapper
@@ -8,7 +13,7 @@ export const Contact = () => {
     >
       {/* <h1>Contact us</h1> */}
       <ContactSection>
-        <div>
+        <ContactContent>
           <p>
             <h1>Contact us</h1>
             <span
@@ -26,7 +31,7 @@ export const Contact = () => {
             with, also we do collaborations with other clubs and organisations
             that share our vision for the world.
           </p>
-        </div>
+        </ContactContent>
         <ContactUsForm
           name="myform"
           method="POST"

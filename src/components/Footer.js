@@ -4,6 +4,8 @@ import {
   Div,
   FooterSection,
   SocialMedia,
+  RawMedia,
+  FooterJoinLink,
   CopyRight,
 } from "../design/Styles"
 import rotaractVideo from "../../src/images/rotaractVideo.mp4"
@@ -36,13 +38,22 @@ export const Footer = () => {
             </a>
           </Div>
         </SocialMedia>
+        <RawMedia>
+          <p>rachyd3150@gmail.com</p>
+          <FooterJoinLink to="/page-2/">Join Us!</FooterJoinLink>
+        </RawMedia>
       </FooterSection>
       <CopyRight
         display="flex"
         flexWrap="wrap"
         bgcolor={props => props.theme.colors.lightColor}
       >
-        © {new Date().getFullYear()}, Built with ❤️ by Abhinav Reddy
+        © {new Date().getFullYear()} Rotaract Club of Hyderabad, built with ❤️
+        by{" "}
+        <a href="https://www.linkedin.com/in/abhinav-reddy-6397b9156/">
+          {" "}
+          Abhinav Reddy
+        </a>
         {` `}
       </CopyRight>
     </SectionWrapper>

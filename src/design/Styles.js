@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6{
     font-family:${props => props.theme.fonts.hFont};
     font-weight: ${props => props.theme.fontWeight.bold};
 }
+
 `
 
 export const Container = styled.section`
@@ -169,7 +170,7 @@ export const NavLogo = styled(Link)`
     max-height: 2.2rem;
   }
 
-  @media ${props => props.theme.mediaQuery.Mobile} {
+  @media ${props => props.theme.mediaQuery.Laptop} {
     img {
       max-height: 1.8rem;
     }
@@ -438,22 +439,31 @@ export const OurGoalCard = styled.div`
 export const ContactSection = styled(Container)`
   width: 100%;
   margin: 0 auto;
-  padding: 5rem 5rem;
+  padding: 5rem 0;
   color: white;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+`
+export const ContactContent = styled.div`
+  width: 40%;
+  padding: 1.5rem;
+  @media ${props => props.theme.mediaQuery.Laptop} {
+    width: 55%;
+  }
   p {
-    width: 30rem;
+    /* width: 30%; */
     line-height: 2em;
     font-weight: ${props => props.theme.fontWeight.light};
     span {
+      line-height: 2.1em;
       border-bottom: 4px solid ${props => props.theme.colors.primaryColor};
     }
   }
 `
 export const ContactUsForm = styled.form`
+  width: 27%;
   margin: 1rem;
   padding: 1.5rem;
   display: flex;
@@ -464,6 +474,9 @@ export const ContactUsForm = styled.form`
   color: ${props => props.theme.colors.secondaryColor};
   font-size: ${props => props.theme.fontSize.xsmall};
   padding-top: 0;
+  @media ${props => props.theme.mediaQuery.Laptop} {
+    width: 35%;
+  }
   h3 {
     margin: 0 0 0.5rem 0;
     align-self: center;
@@ -480,7 +493,7 @@ export const ContactUsForm = styled.form`
   input,
   textarea {
     padding: 0.5em;
-    width: 20rem;
+    width: 100%;
     font-weight: ${props => props.theme.fontWeight.light};
     padding-left: 0;
   }
@@ -516,6 +529,9 @@ export const ContactUsForm = styled.form`
   }
 `
 export const FooterSection = styled.footer`
+  width: 80%;
+  margin: 0 auto;
+  bottom: 0;
   display: ${props => props.display};
   flex-direction: ${props => props.flexDirection};
   flex-wrap: ${props => props.flexWrap};
@@ -524,6 +540,10 @@ export const FooterSection = styled.footer`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  /* align-content: flex-start; */
+  @media ${props => props.theme.mediaQuery.Laptop} {
+    width: 90%;
+  }
   h4 {
     font-weight: ${props => props.theme.fontWeight.normal};
   }
@@ -537,6 +557,14 @@ export const SocialMedia = styled(Div)`
     }
   }
 `
+export const RawMedia = styled(SocialMedia)`
+  height: 7rem;
+  width: 10rem;
+  text-align: center;
+  p {
+    font-size: ${props => props.theme.fontSize.xsmall};
+  }
+`
 export const CopyRight = styled.p`
   margin: 0;
   padding: 1rem;
@@ -544,6 +572,34 @@ export const CopyRight = styled.p`
   display: ${props => props.display};
   flex-wrap: ${props => props.flexWrap};
   justify-content: center;
+  a {
+    color: blueviolet;
+    text-decoration: none;
+    margin-left: 0.5em;
+    :hover {
+      color: ${props => props.theme.colors.primaryColor};
+    }
+  }
+`
+export const FooterJoinLink = styled(Link)`
+  color: ${props => props.theme.colors.bgColor};
+  background-color: ${props => props.theme.colors.primaryColor};
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 25px;
+  font-size: ${props => props.theme.fontSize.xsmall};
+  font-weight: ${props => props.theme.fontWeight.normal};
+  border: 2px solid ${props => props.theme.colors.primaryColor};
+  border-radius: 25px;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s ease-in;
+    color: ${props => props.theme.colors.primaryColor};
+    border: 2px solid ${props => props.theme.colors.primaryColor};
+    background-color: ${props => props.theme.colors.bgColor};
+    box-shadow: ${props => props.theme.boxShadow};
+  }
 `
 // ${props => props.theme.};
 
