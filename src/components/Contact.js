@@ -33,7 +33,7 @@ export const Contact = () => {
           </p>
         </ContactContent>
         <ContactUsForm
-          name="myform"
+          name="contact"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"

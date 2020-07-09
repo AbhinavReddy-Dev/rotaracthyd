@@ -17,7 +17,11 @@ h1, h2, h3, h4, h5, h6{
     font-family:${props => props.theme.fonts.hFont};
     font-weight: ${props => props.theme.fontWeight.bold};
 }
-
+p{
+  @media ${props => props.theme.mediaQuery.Laptop} {
+      font-size: ${props => props.theme.fontSize.xsmall};
+    }
+}
 `
 
 export const Container = styled.section`
@@ -31,6 +35,7 @@ export const SectionWrapper = styled.div`
   display: ${props => props.display};
   flex-direction: ${props => props.flexDirection};
   flex-wrap: ${props => props.flexWrap};
+  background: ${props => props.background};
   &#contact {
     h1 {
       word-spacing: 10px;
@@ -188,11 +193,7 @@ export const LandingImage = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      155deg,
-      rgba(255, 90, 100, 1) 0%,
-      rgba(0, 109, 255, 1) 90%
-    );
+    background: linear-gradient(155deg, #e9025a 0%, rgba(0, 109, 255, 1) 90%);
     opacity: 0.85;
   }
 `
@@ -448,12 +449,11 @@ export const ContactSection = styled(Container)`
 `
 export const ContactContent = styled.div`
   width: 40%;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 55%;
   }
   p {
-    /* width: 30%; */
     line-height: 2em;
     font-weight: ${props => props.theme.fontWeight.light};
     span {
@@ -483,7 +483,7 @@ export const ContactUsForm = styled.form`
     padding: 1.5rem 0;
     text-transform: uppercase;
     font-weight: ${props => props.theme.fontWeight.normal};
-    letter-spacing: 0.05em;
+    word-spacing: 7px;
   }
   label {
     display: flex;
@@ -497,22 +497,34 @@ export const ContactUsForm = styled.form`
     font-weight: ${props => props.theme.fontWeight.light};
     padding-left: 0;
   }
-  ::placeholder {
-    font-size: ${props => props.theme.fontSize.xxsmall};
-    color: lightblue;
-    opacity: 0.8;
-  }
+
   input[type="text"],
-  input[type="email"] {
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"] {
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
     height: 1.8rem;
+    ::placeholder {
+      font-size: ${props => props.theme.fontSize.xsmall};
+      opacity: 0.5;
+    }
+    @media ${props => props.theme.mediaQuery.Laptop} {
+      border-bottom-width: 1.5px;
+    }
   }
   textarea {
     height: 4rem;
     border: none;
     border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
+    ::placeholder {
+      font-size: ${props => props.theme.fontSize.xsmall};
+      opacity: 0.5;
+    }
+    @media ${props => props.theme.mediaQuery.Laptop} {
+      border-bottom-width: 1.5px;
+    }
   }
   input[type="submit"] {
     background-color: #3cbc8d;
@@ -540,7 +552,6 @@ export const FooterSection = styled.footer`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* align-content: flex-start; */
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 90%;
   }
@@ -601,6 +612,14 @@ export const FooterJoinLink = styled(Link)`
     box-shadow: ${props => props.theme.boxShadow};
   }
 `
+
+export const JoinUsSection = styled(ContactSection)`
+  padding-top: 8rem;
+  align-items: flex-start;
+`
+export const JoinUsContent = styled(ContactContent)``
+export const JoinUsForm = styled(ContactUsForm)``
+
 // ${props => props.theme.};
 
 // @media ${props => props.theme.mediaQuery.Laptop} { }

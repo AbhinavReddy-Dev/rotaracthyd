@@ -40,7 +40,7 @@ export const Footer = () => {
         </SocialMedia>
         <RawMedia>
           <p>rachyd3150@gmail.com</p>
-          <FooterJoinLink to="/page-2/">Join Us!</FooterJoinLink>
+          <FooterJoinLink to="/JoinUs/">Join Us!</FooterJoinLink>
         </RawMedia>
       </FooterSection>
       <CopyRight
