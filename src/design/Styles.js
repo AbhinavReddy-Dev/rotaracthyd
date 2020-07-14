@@ -37,8 +37,7 @@ export const SectionWrapper = styled.div`
   flex-wrap: ${props => props.flexWrap};
   background: ${props => props.background};
   justify-content: ${props => props.justifyContent};
-  &#contact,
-  &#ourteam {
+  &#contact {
     h1 {
       word-spacing: 10px;
       text-transform: uppercase;
@@ -53,6 +52,8 @@ export const Div = styled.div`
   flex-direction: ${props => props.flexDirection};
   flex-wrap: ${props => props.flexWrap};
   justify-content: ${props => props.justifyContent};
+  margin: ${props => props.margin};
+  align-content: ${props => props.alignContent};
 `
 export const NavBar = styled.header`
   width: 100%;
@@ -248,15 +249,18 @@ export const LandingContent = styled.section`
     }
   }
 `
-export const AboutSection = styled(Container)`
+export const AboutSection = styled(SectionWrapper)`
+  width: 100%;
+  padding: 3rem 5%;
   background-color: ${props => props.theme.colors.bgColor};
   z-index: 2;
   text-align: center;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   h1 {
+    /* color: white; */
     word-spacing: 10px;
     font-family: ${props => props.theme.fonts.hFont};
     font-weight: ${props => props.theme.fontWeight.bold};
@@ -265,7 +269,7 @@ export const AboutSection = styled(Container)`
   }
   img {
     position: absolute;
-    top: -13.5%;
+    top: -7.5%;
     left: 50%;
     transform: translateX(-50%);
     max-height: 5rem;
@@ -286,9 +290,11 @@ export const AboutHeader = styled.div`
 export const AboutContent = styled.section`
   width: 100%;
   margin: 0 auto;
-
   p {
+    word-spacing: 2px;
+    /* color: white; */
     line-height: 2em;
+    /* font-weight: ${props => props.theme.fontWeight.light}; */
     font-size: ${props => props.theme.fontSize.small};
     @media ${props => props.theme.mediaQuery.Laptop} {
       font-size: ${props => props.theme.fontSize.xsmall};
@@ -439,12 +445,26 @@ export const OurGoalCard = styled.div`
   }
 `
 export const OurTeamWrapper = styled(SectionWrapper)`
-  padding: 5rem 0;
+  width: 100%;
+  padding: 5rem 5%;
+  border-bottom: solid 4px lightcoral;
+
+  h1 {
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: 1rem;
+    word-spacing: 10px;
+    text-transform: uppercase;
+    color: white;
+  }
+  p {
+    text-align: center;
+    color: ${props => props.theme.colors.primaryColor};
+  }
 `
 
 export const OurTeamSection = styled(SectionWrapper)`
-  width: 100%;
-  padding: 1rem 5%;
+  padding: 1rem 0;
   color: white;
 `
 export const MemberCard = styled.div`
@@ -454,6 +474,8 @@ export const MemberCard = styled.div`
     margin-bottom: 0.5rem;
   }
   p {
+    color: white;
+    text-align: left;
     margin-bottom: 0;
     font-size: ${props => props.theme.fontSize.xsmall};
     span {
@@ -462,15 +484,20 @@ export const MemberCard = styled.div`
     }
   }
   img {
-    margin-right: 1.5rem;
-    height: 4rem;
-    width: 4rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    height: 5rem;
+    width: 5rem;
     border-radius: 100px;
     padding: 2px;
     border: solid 2px lightcoral;
   }
   @media ${props => props.theme.mediaQuery.Laptop} {
-    width: 15rem;
+    width: 18rem;
+    img {
+      height: 4rem;
+      width: 4rem;
+    }
     p {
       font-size: ${props => props.theme.fontSize.xxsmall};
     }

@@ -1,14 +1,15 @@
 import React from "react"
 import {
-  Container,
   Div,
   OurTeamWrapper,
   OurTeamSection,
-  OurGoalCardSection,
   MemberCard,
 } from "../design/Styles"
+import Image from "./ProfileImages"
 import { team } from "../design/content.json"
-team.forEach(mem => console.log(mem))
+
+// team.map(mem => console.log(mem.name, mem.photo))
+
 export const OurTeam = () => {
   return (
     <OurTeamWrapper
@@ -16,16 +17,17 @@ export const OurTeam = () => {
       bgcolor={props => props.theme.colors.secondaryColor}
     >
       <h1>Our Team</h1>
+      <p>Meet our team of Incredibles</p>
       <OurTeamSection
         display="flex"
-        justifyContent="space-around"
+        justifyContent="space-evenly"
         flexWrap="wrap"
       >
         {team.map((mem, index) => (
           <MemberCard key={index}>
             <Div display="flex" flexDirection="row">
-              <img />
-              <Div>
+              <Image alt={mem.name} filename={mem.photo}></Image>
+              <Div margin="auto 0">
                 <h4>{mem.name}</h4>
                 <p>{mem.role}</p>
                 <p>

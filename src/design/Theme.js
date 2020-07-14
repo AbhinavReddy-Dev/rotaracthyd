@@ -5,6 +5,7 @@ export default {
     lightColor: "#f2f2f2",
     darkColor: "#0d0d0d",
     bgColor: "#fff",
+    instaColor: "#010326",
   },
   fonts: {
     dFont: "Roboto, -apple-system, 'HelveticaNeue', sans-serif",

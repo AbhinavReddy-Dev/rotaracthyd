@@ -12,7 +12,6 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Rotaract Club of Hyderabad" />
     <LandingPage />
-    <hr />
     <About />
     <OurGoal />
     <OurTeam />

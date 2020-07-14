@@ -4,98 +4,97 @@
       "name": "Rtr. Ramya Chakravarthula",
       "role": "President",
       "profession": "Student & Entrepreneur",
-      "photo": ""
+      "photo": "ramya.jpg"
     },
     {
       "name": "Rtr. Pranitha Adimulam",
       "role": "Secretary",
       "profession": "Student",
-      "photo": ""
+      "photo": "pranitha.jpg"
     },
     {
       "name": "Rtr. Navya Charugulla",
       "role": "Vice President",
       "profession": "Management Trainee",
-      "photo": ""
+      "photo": "navya.jpg"
     },
     {
       "name": "Rtr. Deepika Reddy",
       "role": "Joint Secretary",
       "profession": "Student",
-      "photo": ""
+      "photo": "deepika.jpg"
     },
     {
       "name": "Rtr. Shivani Shrivastava",
       "role": "Treasurer",
       "profession": "Law Student",
-      "photo": ""
+      "photo": "shivani.jpg"
     },
     {
       "name": "Rtr. Siddharth Ragi",
       "role": "Immediate Past President",
       "profession": "Growth Analyst & Entrepeneur",
-      "photo": ""
+      "photo": "siddharth.jpg"
     },
     {
-      "name": "Rtr. Karhik A",
+      "name": "Rtr. Karthik A",
       "role": "Director - Club Services",
       "profession": "Software Engineer",
-      "photo": ""
+      "photo": "karthik.jpg"
     },
     {
       "name": "Rtr. Lasya A",
       "role": "Director - Community Services",
       "profession": "Student",
-      "photo": ""
+      "photo": "lasya.jpg"
     },
     {
       "name": "Rtr. Praneeth D K",
       "role": "Director - Professional Services",
       "profession": "Student & Photographer",
-      "photo": ""
+      "photo": "praneeth.jpg"
     },
     {
       "name": "Rtr. Emmanuel Noel",
       "role": "Director - International Services",
       "profession": "Entrepreneur",
-      "photo": ""
+      "photo": "emmanuel.jpg"
     },
     {
       "name": "Rtr. Anjana Kamana",
       "role": "Sergeant-at-Arms",
       "profession": "Student",
-      "photo": ""
+      "photo": "anjana.jpg"
     },
     {
       "name": "Rtr. Sai Preeth",
       "role": "Chairperson - Literacy & WINS",
       "profession": "Student",
-      "photo": ""
+      "photo": "saipreeth.jpg"
     },
     {
       "name": "Rtr. Yogananda Chowdary",
       "role": "Chairperson - Sports & Culturalss",
       "profession": "Audit Associate",
-      "photo": ""
+      "photo": "yoga.jpg"
     },
     {
       "name": "Rtr. Keerthi Chakravarthula",
       "role": "Chairperson - Membership Development",
       "profession": "Student",
-      "photo": ""
+      "photo": "keerthi.jpg"
     },
     {
       "name": "Rtr. Abhinav Reddy",
       "role": "Chairperson - Public Relations",
       "profession": "Full Stack Web Developer & Graphic Designer",
-      "photo": ""
+      "photo": "abhinav.jpg"
     },
     {
       "name": "Rtr. Komal Chakravarthula",
       "role": "Chairperson - Content Writing",
       "profession": "Student",
-      "photo": ""
-    },
-    { "name": "Rtr. ", "role": "", "profession": "", "photo": "" }
+      "photo": "komal.jpg"
+    }
   ]
 }
