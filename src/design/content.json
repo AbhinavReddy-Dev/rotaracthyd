@@ -1,0 +1,101 @@
+{
+  "team": [
+    {
+      "name": "Rtr. Ramya Chakravarthula",
+      "role": "President",
+      "profession": "Student & Entrepreneur",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Pranitha Adimulam",
+      "role": "Secretary",
+      "profession": "Student",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Navya Charugulla",
+      "role": "Vice President",
+      "profession": "Management Trainee",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Deepika Reddy",
+      "role": "Joint Secretary",
+      "profession": "Student",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Shivani Shrivastava",
+      "role": "Treasurer",
+      "profession": "Law Student",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Siddharth Ragi",
+      "role": "Immediate Past President",
+      "profession": "Growth Analyst & Entrepeneur",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Karhik A",
+      "role": "Director - Club Services",
+      "profession": "Software Engineer",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Lasya A",
+      "role": "Director - Community Services",
+      "profession": "Student",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Praneeth D K",
+      "role": "Director - Professional Services",
+      "profession": "Student & Photographer",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Emmanuel Noel",
+      "role": "Director - International Services",
+      "profession": "Entrepreneur",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Anjana Kamana",
+      "role": "Sergeant-at-Arms",
+      "profession": "Student",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Sai Preeth",
+      "role": "Chairperson - Literacy & WINS",
+      "profession": "Student",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Yogananda Chowdary",
+      "role": "Chairperson - Sports & Culturalss",
+      "profession": "Audit Associate",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Keerthi Chakravarthula",
+      "role": "Chairperson - Membership Development",
+      "profession": "Student",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Abhinav Reddy",
+      "role": "Chairperson - Public Relations",
+      "profession": "Full Stack Web Developer & Graphic Designer",
+      "photo": ""
+    },
+    {
+      "name": "Rtr. Komal Chakravarthula",
+      "role": "Chairperson - Content Writing",
+      "profession": "Student",
+      "photo": ""
+    },
+    { "name": "Rtr. ", "role": "", "profession": "", "photo": "" }
+  ]
+}

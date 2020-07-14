@@ -4,6 +4,7 @@ import { About } from "../components/About"
 import { LandingPage } from "../components/LandingPage"
 import { OurGoal } from "../components/OurGoal"
 import { Contact } from "../components/Contact"
+import { OurTeam } from "../components/OurTeam"
 
 import SEO from "../components/seo"
 
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <hr />
     <About />
     <OurGoal />
+    <OurTeam />
     <Contact />
   </Layout>
 )

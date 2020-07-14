@@ -18,7 +18,7 @@ export const Footer = () => {
   return (
     <SectionWrapper display="flex" flexDirection="column">
       <FooterSection display="flex" flexWrap="wrap">
-        <video loop="true" autoplay="autoplay" controls muted width="300rem">
+        <video loop={true} autoPlay="autoplay" controls muted width="300rem">
           <source src={rotaractVideo} type="video/mp4" />
         </video>
         <SocialMedia display="flex" flexDirection="column">

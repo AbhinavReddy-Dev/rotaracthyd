@@ -14,8 +14,8 @@ export const Contact = () => {
       {/* <h1>Contact us</h1> */}
       <ContactSection>
         <ContactContent>
+          <h1>Contact us</h1>
           <p>
-            <h1>Contact us</h1>
             <span
               style={{
                 fontWeight: "300",
