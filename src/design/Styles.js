@@ -446,9 +446,9 @@ export const OurGoalCard = styled.div`
 `
 export const OurTeamWrapper = styled(SectionWrapper)`
   width: 100%;
-  padding: 5rem 5%;
+  padding: 5rem 5% 7rem 5%;
   border-bottom: solid 4px lightcoral;
-
+  position: relative;
   h1 {
     margin-bottom: 0;
     text-align: center;
@@ -459,12 +459,25 @@ export const OurTeamWrapper = styled(SectionWrapper)`
   }
   p {
     text-align: center;
-    color: ${props => props.theme.colors.primaryColor};
+    color: beige;
+  }
+  a {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: solid 2px palegoldenrod;
+    :hover {
+      opacity: 0.7;
+    }
   }
 `
 
 export const OurTeamSection = styled(SectionWrapper)`
-  padding: 1rem 0;
+  padding: 1rem 0 3rem 0;
   color: white;
 `
 export const MemberCard = styled.div`
@@ -490,7 +503,7 @@ export const MemberCard = styled.div`
     width: 5rem;
     border-radius: 100px;
     padding: 2px;
-    border: solid 2px lightcoral;
+    border: solid 2px paleturquoise;
   }
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 18rem;
@@ -513,6 +526,7 @@ export const ContactSection = styled(Container)`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  border-bottom: solid 4px lightcoral;
 `
 export const ContactContent = styled.div`
   width: 40%;

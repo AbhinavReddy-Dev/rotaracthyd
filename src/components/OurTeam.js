@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import {
   Div,
   OurTeamWrapper,
@@ -23,10 +24,13 @@ export const OurTeam = () => {
         justifyContent="space-evenly"
         flexWrap="wrap"
       >
-        {team.map((mem, index) => (
+        {team.slice(0, 16).map((mem, index) => (
           <MemberCard key={index}>
             <Div display="flex" flexDirection="row">
-              <Image alt={mem.name} filename={mem.photo}></Image>
+              <Image
+                alt={mem.name}
+                filename={mem.photo ? mem.photo : "rotarylogo.png"}
+              />
               <Div margin="auto 0">
                 <h4>{mem.name}</h4>
                 <p>{mem.role}</p>
@@ -38,6 +42,7 @@ export const OurTeam = () => {
           </MemberCard>
         ))}
       </OurTeamSection>
+      <Link to="/fullteam">See full team</Link>
     </OurTeamWrapper>
   )
 }
