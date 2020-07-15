@@ -50,5 +50,5 @@ export default {
   growingLocalEcon:
     "We carry out service projects that enhance economic and community development and create opportunities for decent and productive work for young and old. We also strengthen local entrepreneurs and community leaders, particularly women, in impoverished communities.",
   supportingEnvironment:
-    "We understand that the whole world is our backyard. We can see the effects of climate change in communities we care about, and we haven’t waited to take action. we’re tackling the problem the way we always do: coming up with projects, using our connections to change policy — and planning for the future.",
+    "We understand that the whole world is our backyard. We can see the effects of climate change in communities we care about, and we haven’t waited to take action. we’re tackling the problem the way we always do: coming up with projects, using our connections to change policy and planning for the future.",
 }

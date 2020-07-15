@@ -16,11 +16,7 @@ const fullteam = () => {
     <div>
       <Header />
       <SEO title="Rotaract club of hyderabad | Join us!" />
-      <OurTeamWrapper
-        id="ourteam"
-        bgcolor={props => props.theme.colors.secondaryColor}
-      >
-        <hr></hr>
+      <OurTeamWrapper id="ourteam" bgcolor="#13beaa">
         <br></br>
         <h1>Our Team</h1>
         <p>Meet our team of Incredibles</p>
@@ -32,12 +28,19 @@ const fullteam = () => {
           {team.map((mem, index) => (
             <MemberCard key={index}>
               <Div display="flex" flexDirection="row">
-                <Image
-                  alt={mem.name}
-                  filename={mem.photo ? mem.photo : "rotarylogo.png"}
-                />
+                {mem.photo ? (
+                  <Image
+                    alt={mem.name}
+                    filename={mem.photo ? mem.photo : "rotarylogo.png"}
+                  />
+                ) : (
+                  <img
+                    alt={mem.name}
+                    src={`https://ui-avatars.com/api/?background=010326&color=ffff&name=${mem.name}`}
+                  />
+                )}
                 <Div margin="auto 0">
-                  <h4>{mem.name}</h4>
+                  <h4>Rtr. {mem.name}</h4>
                   <p>{mem.role}</p>
                   <p>
                     <span>{mem.profession}</span>

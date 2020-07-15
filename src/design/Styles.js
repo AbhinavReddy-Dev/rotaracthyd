@@ -304,7 +304,7 @@ export const AboutContent = styled.section`
 
 export const OurGoalSection = styled(Container)`
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 6rem;
   padding-bottom: 5rem;
   h1 {
     word-spacing: 10px;
@@ -324,9 +324,9 @@ export const OurGoalCardSection = styled.section`
 `
 
 export const OurGoalCard = styled.div`
-  height: 15rem;
-  width: 38rem;
-  margin: 3rem 1rem 0 1rem;
+  height: 12rem;
+  width: 25rem;
+  margin: 2rem .5rem 0 .5rem;
   border: solid 2px pink;
   position: relative;
   transition: 0.1s ease-in-out;
@@ -366,7 +366,7 @@ export const OurGoalCard = styled.div`
   :hover:after{
       transition: 0.5s ease-in-out;
       color: white;
-      line-height: 1.5em;
+      line-height: 1.3em;
       background-color: palevioletred;
       padding: 1.5rem;
       display: flex;
@@ -378,6 +378,8 @@ export const OurGoalCard = styled.div`
       height: 100%;
       @media ${props => props.theme.mediaQuery.Laptop} {
     font-size: ${props => props.theme.fontSize.xsmall};
+    line-height: 1.5em;
+
       }
   }
   &:nth-child(1) {
@@ -446,7 +448,7 @@ export const OurGoalCard = styled.div`
 `
 export const OurTeamWrapper = styled(SectionWrapper)`
   width: 100%;
-  padding: 5rem 5% 7rem 5%;
+  padding: 6rem 5% 5rem 5%;
   border-bottom: solid 4px lightcoral;
   position: relative;
   h1 {
@@ -462,6 +464,7 @@ export const OurTeamWrapper = styled(SectionWrapper)`
     color: beige;
   }
   a {
+    font-size: ${props => props.theme.fontSize.xsmall};
     position: absolute;
     right: 50%;
     transform: translateX(50%);
@@ -477,12 +480,12 @@ export const OurTeamWrapper = styled(SectionWrapper)`
 `
 
 export const OurTeamSection = styled(SectionWrapper)`
-  padding: 1rem 0 3rem 0;
+  padding: 1rem 0 1rem 0;
   color: white;
 `
 export const MemberCard = styled.div`
   width: 20rem;
-  margin: 1rem 0.5rem;
+  margin: 1rem 0rem;
   h4 {
     margin-bottom: 0.5rem;
   }
@@ -504,6 +507,14 @@ export const MemberCard = styled.div`
     border-radius: 100px;
     padding: 2px;
     border: solid 2px paleturquoise;
+    /* background-color: white; */
+  }
+  &:nth-child(1) {
+    &:nth-child(1) {
+      img {
+        /* border: solid 2px red; */
+      }
+    }
   }
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 18rem;
@@ -628,7 +639,7 @@ export const FooterSection = styled.footer`
   display: ${props => props.display};
   flex-direction: ${props => props.flexDirection};
   flex-wrap: ${props => props.flexWrap};
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;

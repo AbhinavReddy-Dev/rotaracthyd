@@ -13,10 +13,7 @@ import { team } from "../design/content.json"
 
 export const OurTeam = () => {
   return (
-    <OurTeamWrapper
-      id="ourteam"
-      bgcolor={props => props.theme.colors.secondaryColor}
-    >
+    <OurTeamWrapper id="ourteam" bgcolor="#13beaa">
       <h1>Our Team</h1>
       <p>Meet our team of Incredibles</p>
       <OurTeamSection
