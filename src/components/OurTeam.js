@@ -29,7 +29,7 @@ export const OurTeam = () => {
                 filename={mem.photo ? mem.photo : "rotarylogo.png"}
               />
               <Div margin="auto 0">
-                <h4>{mem.name}</h4>
+                <h4>Rtr. {mem.name}</h4>
                 <p>{mem.role}</p>
                 <p>
                   <span>{mem.profession}</span>

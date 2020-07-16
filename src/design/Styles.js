@@ -1,11 +1,13 @@
 import styled, { createGlobalStyle } from "styled-components"
 import { Link } from "gatsby"
+import Slider from "react-styled-carousel"
 
 export const GlobalStyle = createGlobalStyle`
 * {
 box-sizing: border-box;
 margin: 0;
 padding: 0;
+font-family: ${props => props.theme.fonts.dFont};
 }
 body, html {
 font-family: ${props => props.theme.fonts.dFont};
@@ -18,6 +20,7 @@ h1, h2, h3, h4, h5, h6{
     font-weight: ${props => props.theme.fontWeight.bold};
 }
 p{
+font-family: ${props => props.theme.fonts.pFont};
   @media ${props => props.theme.mediaQuery.Laptop} {
       font-size: ${props => props.theme.fontSize.small};
     }
@@ -377,9 +380,8 @@ export const OurGoalCard = styled.div`
       left: 0;
       height: 100%;
       @media ${props => props.theme.mediaQuery.Laptop} {
-    font-size: ${props => props.theme.fontSize.xsmall};
-    line-height: 1.5em;
-
+        font-size: ${props => props.theme.fontSize.xsmall};
+        line-height: 1.5em;
       }
   }
   &:nth-child(1) {
@@ -527,6 +529,8 @@ export const MemberCard = styled.div`
     }
   }
 `
+
+export const OurWorkWrapper = styled(SectionWrapper)``
 
 export const ContactSection = styled(Container)`
   width: 100%;
