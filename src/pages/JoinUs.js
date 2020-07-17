@@ -7,7 +7,6 @@ import {
 } from "../design/Styles"
 import SEO from "../components/seo"
 import { Footer } from "../components/Footer"
-
 import { Header } from "../components/Header"
 const JoinUs = () => (
   <>
