@@ -135,7 +135,9 @@ const JoinUs = () => (
             />
           </label>
           <div data-netlify-captcha></div>
-          <input type="submit" value="JOIN THE CLUB" />
+          <button type="submit" value="JOIN THE CLUB">
+            JOIN THE CLUB
+          </button>
         </JoinUsForm>
       </JoinUsSection>
     </SectionWrapper>

@@ -684,7 +684,7 @@ export const ContactUsForm = styled.form`
       border-bottom-width: 1.5px;
     }
   }
-  input[type="submit"] {
+  button {
     background-color: #3cbc8d;
     color: white;
     margin-top: 1.5rem;

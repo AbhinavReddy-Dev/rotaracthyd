@@ -67,7 +67,9 @@ export const Contact = () => {
             />
           </label>
           <div data-netlify-captcha></div>
-          <input type="submit" value="SEND MAIL" />
+          <button type="submit" value="SEND MAIL">
+            SEND MAIL
+          </button>
         </ContactUsForm>
       </ContactSection>
     </SectionWrapper>
