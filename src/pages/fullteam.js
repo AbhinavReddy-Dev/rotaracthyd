@@ -15,7 +15,7 @@ const fullteam = () => {
   return (
     <div>
       <Header />
-      <SEO title="Rotaract club of hyderabad | Join us!" />
+      <SEO title="Rotaract club of hyderabad" />
       <OurTeamWrapper id="ourteam" bgcolor="#13beaa">
         <br></br>
         <h1>Our Team</h1>

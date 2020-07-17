@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components"
 import { Link } from "gatsby"
 import Slider from "react-styled-carousel"
+import ImageComponent from "../components/WorkImages"
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -57,6 +58,7 @@ export const Div = styled.div`
   justify-content: ${props => props.justifyContent};
   margin: ${props => props.margin};
   align-content: ${props => props.alignContent};
+  align-items: ${props => props.alignItems};
 `
 export const NavBar = styled.header`
   width: 100%;
@@ -150,7 +152,6 @@ export const NavLinkJoin = styled(NavLink)`
     color: ${props => props.theme.colors.primaryColor};
     border: 2px solid ${props => props.theme.colors.primaryColor};
     background-color: ${props => props.theme.colors.bgColor};
-    /* box-shadow: ${props => props.theme.boxShadow}; */
   }
   &:after {
     border-bottom: none;
@@ -261,6 +262,8 @@ export const AboutSection = styled(SectionWrapper)`
   display: flex;
   flex-direction: column;
   position: relative;
+  border-bottom: solid 4px coral;
+
   /* margin-bottom: 2rem; */
   h1 {
     /* color: white; */
@@ -307,7 +310,7 @@ export const AboutContent = styled.section`
 
 export const OurGoalSection = styled(Container)`
   text-align: center;
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
   h1 {
     word-spacing: 10px;
@@ -530,7 +533,60 @@ export const MemberCard = styled.div`
   }
 `
 
-export const OurWorkWrapper = styled(SectionWrapper)``
+export const OurWorkWrapper = styled(SectionWrapper)`
+  width: 100%;
+  padding: 5rem 7% 7rem 7%;
+  border-bottom: solid 4px coral;
+  h1,
+  h3 {
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: 1rem;
+    word-spacing: 10px;
+    text-transform: uppercase;
+    color: white;
+  }
+  h3 {
+    margin-top: 2rem;
+
+    font-weight: ${props => props.theme.fontWeight.light};
+  }
+  p {
+    text-align: center;
+    color: ${props => props.theme.colors.bgColor};
+    font-weight: ${props => props.theme.fontWeight.light};
+  }
+  a {
+    font-size: ${props => props.theme.fontSize.xsmall};
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: solid 2px palevioletred;
+    :hover {
+      opacity: 0.7;
+    }
+  }
+`
+export const ImagesCarousel = styled(Slider)`
+  margin: 2rem 0 1rem 0;
+  padding: 2rem 0.5rem;
+  background-color: #f2f2f2;
+  box-shadow: ${props => props.theme.boxShadowLite};
+  img {
+    border-radius: 2.5em;
+    max-height: 22rem;
+    max-width: 100%;
+    margin: auto 0rem;
+    padding: 2rem;
+  }
+`
+export const Image = styled(ImageComponent)`
+  width: fit-content;
+`
 
 export const ContactSection = styled(Container)`
   width: 100%;
@@ -559,7 +615,7 @@ export const ContactContent = styled.div`
   }
 `
 export const ContactUsForm = styled.form`
-  width: 27%;
+  min-width: 27%;
   margin: 1rem;
   padding: 1.5rem;
   display: flex;
@@ -648,6 +704,9 @@ export const FooterSection = styled.footer`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  video {
+    padding: 1rem 0;
+  }
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 90%;
   }
@@ -657,6 +716,7 @@ export const FooterSection = styled.footer`
 `
 export const SocialMedia = styled(Div)`
   width: 10rem;
+  /* padding: 2rem 0; */
   img {
     width: 1.5rem;
     :hover {
@@ -667,6 +727,7 @@ export const SocialMedia = styled(Div)`
 export const RawMedia = styled(SocialMedia)`
   height: 7rem;
   width: 10rem;
+  /* padding: 2rem 0; */
   text-align: center;
   p {
     font-size: ${props => props.theme.fontSize.xsmall};

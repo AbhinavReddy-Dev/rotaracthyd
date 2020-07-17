@@ -312,5 +312,82 @@
       "profession": "",
       "photo": ""
     }
-  ]
+  ],
+  "ourwork": {
+    "samplecollection": [
+      "inst1819_1.jpg",
+      "inst1819_2.jpg",
+      "inst1920_2.jpg",
+      "clubevent_1.jpg",
+      "homevisit_4.jpg",
+      "homevisit_2.jpg",
+      "homevisit_1.jpg",
+      "rotary_1.jpg",
+      "homevisit_3.jpg",
+      "clubevent_2.jpg"
+    ],
+    "samplecollectioncontent": "",
+    "installation": [
+      "inst1819_1.jpg",
+      "inst1819_2.jpg",
+      "inst1819_3",
+      "inst1920_1.jpg",
+      "inst1920_2.jpg",
+      "inst1920_3"
+    ],
+    "installationcontent": "Installation ceremony of the year 2018 - 2019",
+    "clubmeetings": [
+      "clubmeet_1.jpg",
+      "clubmeet_2.jpg",
+      "clubmeet_3.jpg",
+      "clubmeet_8.jpg",
+      "clubmeet_6.jpg",
+      "clubmeet_7.jpg"
+    ],
+    "clubmeetingscontent": "",
+    "homevisits": [
+      "homevisit_1.jpg",
+      "homevisit_2.jpg",
+      "homevisit_3.jpg",
+      "homevisit_4.jpg",
+      "homevisit_5.jpg",
+      "homevisit_6.jpg",
+      "homevisit_7.jpg"
+    ],
+    "homevisitscontent": "We visit orphanage homes once or twice in a month to teach them or celebrate birthdays and also on days like children's day, christmas and others that bring joy to children.",
+    "community": [
+      "commevent_1.jpg",
+      "commevent_2.jpg",
+      "commevent_3.jpg",
+      "commevent_4.jpg",
+      "commevent_5.jpg",
+      "commevent_6.jpg",
+      "commevent_7.jpg",
+      "commevent_8.jpg",
+      "commevent_9.jpg",
+      "commevent_10.jpg",
+      "commevent_11.jpg",
+      "commevent_12.jpg"
+    ],
+    "communitycontent": "",
+    "rotary": ["rotary_1", "rotary_2", "rotary_3", "rotary_4"],
+    "rotarycontent": "",
+    "clubevents": [
+      "clubevent_1",
+      "clubevent_2",
+      "clubevent_3",
+      "clubevent_4",
+      "clubevent_5"
+    ],
+    "clubeventscontent": "",
+    "collaborations": [
+      "collab_1",
+      "collab_2",
+      "collab_3",
+      "collab_4",
+      "collab_5",
+      "collab_6"
+    ],
+    "collaborationscontent": ""
+  }
 }

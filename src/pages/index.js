@@ -5,6 +5,7 @@ import { LandingPage } from "../components/LandingPage"
 import { OurGoal } from "../components/OurGoal"
 import { Contact } from "../components/Contact"
 import { OurTeam } from "../components/OurTeam"
+import { OurWork } from "../components/OurWork"
 
 import SEO from "../components/seo"
 
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <About />
     <OurGoal />
     <OurTeam />
+    <OurWork />
     <Contact />
   </Layout>
 )

@@ -11,6 +11,7 @@ export const OurGoal = () => {
     <SectionWrapper
       bgcolor={props => props.theme.colors.lightColor}
       id="ourgoal"
+      style={{ borderBottom: "solid 4px coral" }}
     >
       <OurGoalSection>
         <h1>Our Goal</h1>

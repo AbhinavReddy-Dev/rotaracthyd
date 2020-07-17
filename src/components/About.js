@@ -25,7 +25,7 @@ export const About = () => {
       <AboutContent>
         <p>
           Rotaract clubs were founded in 1968 by Rotary International, a
-          worldwide association of service-minded professional leaders.Rotaract
+          worldwide association of service-minded professional leaders. Rotaract
           clubs bring together people of ages 18-30 to exchange ideas with
           leaders in the community, develop leadership and professional skills,
           and have fun through service. Today there are over 10,904
