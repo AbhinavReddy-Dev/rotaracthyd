@@ -208,7 +208,7 @@ export const LandingContent = styled.section`
   width: 100%;
   position: absolute;
   z-index: 2;
-  bottom: 15%;
+  bottom: 10%;
   right: 50%;
   transform: translateX(50%);
   color: #fff;
@@ -220,11 +220,17 @@ export const LandingContent = styled.section`
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  p {
+    font-weight: ${props => props.theme.fontWeight.light};
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
   h1 {
     margin: 0;
     font-weight: ${props => props.theme.fontWeight.black};
     font-size: ${props => props.theme.fontSize.xlarge};
     word-spacing: 15px;
+    padding-bottom: 1rem;
   }
   h3 {
     margin-top: 1rem;

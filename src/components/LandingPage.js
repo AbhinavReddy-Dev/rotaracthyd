@@ -23,6 +23,10 @@ export const LandingPage = () => {
       />
       <LandingContent>
         <h1>ROTARACT CLUB OF HYDERABAD</h1>
+        <div>
+          <p>(Sponsored by Rotary Club of Hyderabad)</p>
+          <p>RID 3150 | Club ID 43657</p>
+        </div>
         <h3>53 Years of changing lives</h3>
         <div className="content-wrap">
           <h4>Self Development.</h4>
