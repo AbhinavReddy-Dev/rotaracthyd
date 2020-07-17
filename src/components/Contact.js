@@ -41,28 +41,28 @@ export const Contact = () => {
         >
           <h3>Write to us</h3>
           <input type="hidden" name="bot-field" />
-          <label htmlFor="name">
+          <label>
             Name
             <input
-              id="name"
+              // id="name"
               type="text"
               name="name"
               placeholder="enter your name"
             />
           </label>
-          <label htmlFor="email">
+          <label>
             Email
             <input
-              id="email"
+              // id="email"
               type="email"
               name="email"
               placeholder="your@email.com"
             />
           </label>
-          <label htmlFor="message">
+          <label>
             Message
             <textarea
-              id="message"
+              // id="message"
               name="message"
               placeholder="type in your message"
             />
