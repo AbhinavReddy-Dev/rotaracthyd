@@ -2,8 +2,9 @@ import React from "react"
 import { Div, OurWorkWrapper, ImagesCarousel, Image } from "../design/Styles"
 import { ourwork } from "../design/content.json"
 import SEO from "../components/seo"
-import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
+
+import { Header } from "../components/Header"
 
 const installationImages = ourwork.installation
 const clubmeetImages = ourwork.clubmeetings

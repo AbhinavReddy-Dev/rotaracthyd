@@ -6,8 +6,9 @@ import {
   JoinUsForm,
 } from "../design/Styles"
 import SEO from "../components/seo"
-import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
+
+import { Header } from "../components/Header"
 const JoinUs = () => (
   <>
     <Header />
