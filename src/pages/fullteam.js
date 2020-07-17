@@ -8,7 +8,7 @@ import {
 import Image from "../components/ProfileImages"
 import { team } from "../design/content.json"
 import SEO from "../components/seo"
-import Header from "../components/Header"
+import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 
 const fullteam = () => {

@@ -12,7 +12,7 @@ import {
   NavLogo,
 } from "../design/Styles"
 
-const Header = () => {
+export const Header = () => {
   const pinkLogo = useStaticQuery(graphql`
     query {
       pinkLogo: file(relativePath: { eq: "pinkLogo.png" }) {
@@ -58,4 +58,4 @@ const Header = () => {
 //   siteTitle: ``,
 // }
 
-export default Header
+// export default Header
