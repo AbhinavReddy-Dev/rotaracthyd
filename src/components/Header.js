@@ -15,7 +15,7 @@ import {
 export const Header = () => {
   const pinkLogo = useStaticQuery(graphql`
     query {
-      pinkLogo: file(relativePath: { eq: “pinkLogo.png” }) {
+      pinklogo: file(relativePath: { eq: "pinkLogo.png" }) {
         publicURL
       }
     }
@@ -25,7 +25,7 @@ export const Header = () => {
     <NavBar>
       <NavContent>
         <NavLogo to="/">
-          <img src={pinkLogo.pinkLogo.publicURL} alt="pinkClubLogo" />
+          <img src={pinkLogo.pinklogo.publicURL} alt="pinkClubLogo" />
         </NavLogo>
         <NavLinks>
           <NavLink className="about" to="/#about" activeClassName="active">
