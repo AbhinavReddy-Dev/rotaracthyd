@@ -37,6 +37,7 @@ export const Contact = () => {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
+          action="/success/"
         >
           <h3>Write to us</h3>
           <input type="hidden" name="bot-field" />
