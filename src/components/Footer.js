@@ -17,20 +17,24 @@ import twitter from "../images/twitter.png"
 export const Footer = () => {
   return (
     <SectionWrapper display="flex" flexDirection="column">
-      <FooterSection display="flex" flexWrap="wrap">
+      <FooterSection
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="space-between"
+      >
         <video loop={true} autoPlay="autoplay" controls muted width="300rem">
           <source src={rotaractVideo} type="video/mp4" />
         </video>
         <SocialMedia display="flex" flexDirection="column">
           <h4>Find us on</h4>
           <Div display="flex" flexWrap="wrap" justifyContent="space-between">
-            <a href="/">
+            <a href="https://www.facebook.com/RACHYD3150">
               <img src={facebook} alt="facebook"></img>
             </a>
-            <a href="/">
+            <a href="https://www.instagram.com/rotaract.hyd/">
               <img src={instagram} alt="instagram"></img>
             </a>
-            <a href="/">
+            <a href="https://www.linkedin.com/company/rotaractclubofhyderabad">
               <img src={linkedin} alt="linkedin"></img>
             </a>
             <a href="/">
@@ -40,7 +44,7 @@ export const Footer = () => {
         </SocialMedia>
         <RawMedia>
           <p>rachyd3150@gmail.com</p>
-          <FooterJoinLink to="/JoinUs/">Join Us!</FooterJoinLink>
+          <FooterJoinLink to="/JoinUs">Join Us!</FooterJoinLink>
         </RawMedia>
       </FooterSection>
       <CopyRight

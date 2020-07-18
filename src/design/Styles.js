@@ -196,6 +196,10 @@ export const LandingImage = styled.section`
   position: relative;
   .landingImg img {
     position: fixed;
+    @media ${props => props.theme.mediaQuery.SpecialCase} {
+      height: 80vh;
+      display: none;
+    }
   }
   .landingImg:after {
     content: "";
@@ -206,6 +210,15 @@ export const LandingImage = styled.section`
     height: 100%;
     background: linear-gradient(155deg, #e9025a 0%, rgba(0, 109, 255, 1) 90%);
     opacity: 0.85;
+    @media ${props => props.theme.mediaQuery.SpecialCase} {
+      display: none;
+    }
+  }
+  @media ${props => props.theme.mediaQuery.SpecialCase} {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(155deg, #e9025a 0%, rgba(0, 109, 255, 1) 90%);
+    padding: 0 25%;
   }
 `
 export const LandingContent = styled.section`
@@ -262,6 +275,21 @@ export const LandingContent = styled.section`
       width: 48%;
     }
   }
+  @media ${props => props.theme.mediaQuery.SpecialCase} {
+    bottom: 20%;
+    h1 {
+      font-size: ${props => props.theme.fontSize.medium};
+    }
+    h3 {
+      font-size: ${props => props.theme.fontSize.medium};
+    }
+    h4 {
+      font-size: ${props => props.theme.fontSize.small};
+    }
+    .content-wrap {
+      width: 40%;
+    }
+  }
 `
 export const AboutSection = styled(SectionWrapper)`
   width: 100%;
@@ -292,6 +320,9 @@ export const AboutSection = styled(SectionWrapper)`
     max-width: 5rem;
     @media ${props => props.theme.mediaQuery.Laptop} {
       top: -12.8%;
+    }
+    @media ${props => props.theme.mediaQuery.Tablet} {
+      top: -5%;
     }
   }
 `
@@ -709,16 +740,26 @@ export const FooterSection = styled.footer`
   display: ${props => props.display};
   flex-direction: ${props => props.flexDirection};
   flex-wrap: ${props => props.flexWrap};
-  justify-content: space-around;
+  justify-content: ${props => props.justifyContent};
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  video {
-    padding: 1rem 0;
-  }
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 90%;
+  }
+  video {
+    padding: 1rem 0;
+    @media ${props => props.theme.mediaQuery.Tablet} {
+      width: 20rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    display: flex;
+    flex-direction: column;
+    justify-content: "space-evenly";
   }
   h4 {
     font-weight: ${props => props.theme.fontWeight.normal};
@@ -727,6 +768,9 @@ export const FooterSection = styled.footer`
 export const SocialMedia = styled(Div)`
   width: 10rem;
   /* padding: 2rem 0; */
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    padding-bottom: 2rem;
+  }
   img {
     width: 1.5rem;
     :hover {

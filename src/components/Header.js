@@ -44,7 +44,7 @@ export const Header = () => {
             contact
           </NavLink>
         </NavLinks>
-        <NavLinkJoin to="/JoinUs/">join us!</NavLinkJoin>
+        <NavLinkJoin to="/JoinUs">join us!</NavLinkJoin>
       </NavContent>
     </NavBar>
   )
