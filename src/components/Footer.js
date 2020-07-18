@@ -17,7 +17,11 @@ import twitter from "../images/twitter.png"
 export const Footer = () => {
   return (
     <SectionWrapper display="flex" flexDirection="column">
-      <FooterSection display="flex" flexWrap="wrap">
+      <FooterSection
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="space-between"
+      >
         <video loop={true} autoPlay="autoplay" controls muted width="300rem">
           <source src={rotaractVideo} type="video/mp4" />
         </video>
