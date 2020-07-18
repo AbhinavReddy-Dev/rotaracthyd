@@ -33,6 +33,8 @@ export const Container = styled.section`
   width: 90%;
   padding: 10px 5px;
   position: relative;
+  height: ${props => props.height};
+  padding: ${props => props.padding};
 `
 export const SectionWrapper = styled.div`
   background-color: ${props => props.bgcolor};
@@ -41,6 +43,8 @@ export const SectionWrapper = styled.div`
   flex-wrap: ${props => props.flexWrap};
   background: ${props => props.background};
   justify-content: ${props => props.justifyContent};
+  align-items: ${props => props.alignItems};
+  text-align: ${props => props.textAlign};
   &#contact {
     h1 {
       word-spacing: 10px;

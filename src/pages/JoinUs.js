@@ -78,6 +78,7 @@ const JoinUs = () => {
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             netlify
+            action="/successpage"
           >
             <h3>Come, join the cause!</h3>
             <span style={{ fontSize: ".7em" }}>
