@@ -6,7 +6,7 @@ import { ourwork } from "../design/content.json"
 const sampleImages = ourwork.samplecollection
 const sampleImagesContent = ourwork.samplecollectioncontent
 const responsive = [
-  { breakPoint: 1280, cardsToShow: 4 }, // this will be applied if screen size is greater than 1280px. cardsToShow will become 4.
+  { breakPoint: 1280, cardsToShow: 3 }, // this will be applied if screen size is greater than 1280px. cardsToShow will become 4.
   { breakPoint: 760, cardsToShow: 2 },
   { breakPoint: 420, cardsToShow: 1 },
 ]
