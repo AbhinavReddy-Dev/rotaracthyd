@@ -64,13 +64,14 @@ export const Contact = () => {
           method="post"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/"
+          // action="/"
           onSubmit={handleSubmit}
+          netlify
         >
           <h3>Write to us</h3>
           <input type="hidden" name="form-name" value="contact" />
           <input type="hidden" name="bot-field" onChange={handleChange} />
-          <label>
+          <label htmlFor="name">
             Name
             <input
               id="name"
@@ -80,7 +81,7 @@ export const Contact = () => {
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label htmlFor="email">
             Email
             <input
               id="email"
@@ -90,7 +91,7 @@ export const Contact = () => {
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label htmlFor="message">
             Message
             <textarea
               id="message"
