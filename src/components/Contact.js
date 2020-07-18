@@ -64,7 +64,7 @@ export const Contact = () => {
           method="post"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/thank-you"
+          action="/"
           onSubmit={handleSubmit}
         >
           <h3>Write to us</h3>
