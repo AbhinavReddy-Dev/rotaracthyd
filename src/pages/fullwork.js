@@ -108,7 +108,7 @@ const fullwork = () => {
           ))}
         </ImagesCarousel>
         <hr></hr>
-        <h3>Club meetings</h3>
+        <h3>Rotary meetings</h3>
         <ImagesCarousel
           responsive={responsive}
           infinite={true}
