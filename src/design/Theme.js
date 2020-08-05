@@ -28,7 +28,9 @@ export default {
   },
   mediaQuery: {
     Laptop: "(max-width: 1600px)",
-    Tablet: "(max-width: 848px)",
+    Special: "(max-width: 1024px)",
+    Tablet: "(max-width: 850px)",
+
     Mobile: "(max-width: 420px)",
   },
   boxShadow: "11px 11px 21px -7px rgba(199,199,199,1)",

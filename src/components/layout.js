@@ -4,6 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
+// import { ResNav } from "./ResNav"
 
 import React from "react"
 import PropTypes from "prop-types"
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      {/* <ResNav /> */}
       <main>{children}</main>
       <Footer />
     </>

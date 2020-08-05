@@ -10,7 +10,9 @@ import {
   NavLink,
   NavLinkJoin,
   NavLogo,
+  Burger,
 } from "../design/Styles"
+import { ResNav } from "./ResNav"
 
 export const Header = () => {
   const pinkLogo = useStaticQuery(graphql`
@@ -20,7 +22,19 @@ export const Header = () => {
       }
     }
   `)
-
+  // window.addEventListener("scroll", function () {
+  //   let header = document.querySelector("header")
+  //   let windowPosition = window.scrollY > 0
+  //   header.classList.toggle("scrolling-active", windowPosition)
+  // })
+  function navshrink() {
+    const resnav = document.querySelector(".res-nav")
+    if (resnav.style.display === "none") {
+      resnav.style.display = "flex"
+    } else {
+      resnav.style.display = "none"
+    }
+  }
   return (
     <NavBar>
       <NavContent>
@@ -45,7 +59,13 @@ export const Header = () => {
           </NavLink>
         </NavLinks>
         <NavLinkJoin to="/JoinUs">join us!</NavLinkJoin>
+        <Burger onClick={() => navshrink()}>
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+        </Burger>
       </NavContent>
+      <ResNav />
     </NavBar>
   )
 }

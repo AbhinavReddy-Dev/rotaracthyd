@@ -90,13 +90,35 @@ export const NavContent = styled(Container)`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-
   ${NavBar}.scrolling-active & {
     padding: 7px 0px;
   }
 `
 export const NavLinks = styled(NavContent)`
   width: 50%;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    display: none;
+  }
+`
+export const ResNavLinks = styled.div`
+  display: none;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    position: fixed;
+    margin: 0;
+    background: ${props => props.theme.colors.secondaryColor};
+    right: 0;
+    top: 3.6rem;
+    ${NavBar}.scrolling-active & {
+      top: 3rem;
+      height: calc(100vh - 3rem);
+    }
+    height: calc(100vh - 3.6rem);
+    width: 70%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const NavLink = styled(Link)`
@@ -106,7 +128,6 @@ export const NavLink = styled(Link)`
   font-size: ${props => props.theme.fontSize.xsmall};
   font-weight: ${props => props.theme.fontWeight.normal};
   letter-spacing: 1px;
-  /* transition: 0.8s ease-in; */
   &:after {
     display: block;
     content: "";
@@ -118,14 +139,12 @@ export const NavLink = styled(Link)`
   &:hover:after {
     transform: scaleX(1);
   }
-
   .active & {
     border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
   }
   ${NavBar}.scrolling-active & {
     font-weight: ${props => props.theme.fontWeight.normal};
     color: ${props => props.theme.colors.secondaryColor};
-
     &:after {
       border-bottom: 2px solid ${props => props.theme.colors.primaryColor};
     }
@@ -139,9 +158,16 @@ export const NavLink = styled(Link)`
       font-weight: ${props => props.theme.fontWeight.normal};
     }
   }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    margin-bottom: 2em;
+    ${NavBar}.scrolling-active & {
+      font-size: ${props => props.theme.fontSize.small};
+      color: ${props => props.theme.colors.bgColor};
+    }
+    font-size: ${props => props.theme.fontSize.small};
+  }
 `
 export const NavLinkJoin = styled(NavLink)`
-  /* height: 100%; */
   color: ${props => props.theme.colors.lightColor};
   background-color: ${props => props.theme.colors.primaryColor};
   text-decoration: none;
@@ -177,6 +203,14 @@ export const NavLinkJoin = styled(NavLink)`
       border-bottom: none;
     }
   }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    display: none;
+  }
+`
+export const NavLinkJoinMobile = styled(NavLinkJoin)`
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    display: block;
+  }
 `
 export const NavLogo = styled(Link)`
   transition: 1s ease-in-out;
@@ -185,10 +219,33 @@ export const NavLogo = styled(Link)`
     margin: 0;
     max-height: 2.2rem;
   }
-
   @media ${props => props.theme.mediaQuery.Laptop} {
     img {
       max-height: 1.8rem;
+    }
+  }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    ${NavBar}.scrolling-active & {
+      img {
+        max-height: 2rem;
+      }
+    }
+  }
+`
+export const Burger = styled.div`
+  display: none;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    flex-direction: column;
+    display: inherit;
+    margin-top: 7px;
+    div {
+      width: 25px;
+      height: 2.5px;
+      background-color: ${props => props.theme.colors.bgColor};
+      margin: 2px;
+      ${NavBar}.scrolling-active & {
+        background-color: ${props => props.theme.colors.primaryColor};
+      }
     }
   }
 `
@@ -207,6 +264,15 @@ export const LandingImage = styled.section`
     background: linear-gradient(155deg, #e9025a 0%, rgba(0, 109, 255, 1) 90%);
     opacity: 0.85;
   }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    .landingImg img,
+    .landingImg:after {
+      display: none;
+    }
+    height: 30rem;
+    background: linear-gradient(155deg, #e9025a 0%, rgba(0, 109, 255, 1) 90%);
+    opacity: 0.85;
+  }
 `
 export const LandingContent = styled.section`
   width: 100%;
@@ -217,6 +283,9 @@ export const LandingContent = styled.section`
   transform: translateX(50%);
   color: #fff;
   text-align: center;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    padding: auto 0;
+  }
   .content-wrap {
     margin: 0 auto;
     width: 34%;
@@ -608,12 +677,18 @@ export const ContactSection = styled(Container)`
   align-items: center;
   justify-content: space-evenly;
   border-bottom: solid 4px lightcoral;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    flex-direction: column;
+  }
 `
 export const ContactContent = styled.div`
   width: 40%;
   padding: 0 1.5rem;
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 55%;
+  }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    width: 80%;
   }
   p {
     line-height: 2em;
@@ -638,6 +713,9 @@ export const ContactUsForm = styled.form`
   padding-top: 0;
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 35%;
+  }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    width: 70%;
   }
   h3 {
     margin: 0 0 0.5rem 0;
@@ -720,27 +798,48 @@ export const FooterSection = styled.footer`
   @media ${props => props.theme.mediaQuery.Laptop} {
     width: 90%;
   }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    width: 100%;
+    video {
+      width: 13rem;
+      margin-right: 1em;
+    }
+  }
   h4 {
     font-weight: ${props => props.theme.fontWeight.normal};
   }
 `
 export const SocialMedia = styled(Div)`
   width: 10rem;
-  /* padding: 2rem 0; */
+  text-align: center;
+
   img {
     width: 1.5rem;
+
     :hover {
       opacity: 0.7;
+    }
+  }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    img {
+      width: 1rem;
     }
   }
 `
 export const RawMedia = styled(SocialMedia)`
   height: 7rem;
   width: 10rem;
-  /* padding: 2rem 0; */
   text-align: center;
   p {
     font-size: ${props => props.theme.fontSize.xsmall};
+    margin-bottom: 0.5em;
+  }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    width: 12rem;
+    height: 5rem;
+    p {
+      font-size: ${props => props.theme.fontSize.xxsmall};
+    }
   }
 `
 export const CopyRight = styled.p`
@@ -777,6 +876,10 @@ export const FooterJoinLink = styled(Link)`
     border: 2px solid ${props => props.theme.colors.primaryColor};
     background-color: ${props => props.theme.colors.bgColor};
     box-shadow: ${props => props.theme.boxShadow};
+  }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    font-size: ${props => props.theme.fontSize.xxsmall};
+    padding: 3px 20px;
   }
 `
 
