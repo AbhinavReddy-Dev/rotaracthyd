@@ -12,6 +12,7 @@ const responsive = [
   { breakPoint: 0, cardsToShow: 1 },
 ]
 export const OurWork = () => {
+  let pathname = typeof window !== "undefined" ? window.location.pathname : ""
   return (
     <OurWorkWrapper id="ourwork" bgcolor="#1b6ca8">
       <h1>Our Work</h1>
@@ -20,7 +21,7 @@ export const OurWork = () => {
         responsive={responsive}
         infinite={true}
         pauseOnMouseOver={true}
-        showArrows={window.matchMedia("(max-width: 850px)").matches}
+        showArrows={pathname.matchMedia("(max-width: 850px)").matches}
         autoSlide={true}
       >
         {sampleImages.map((image, index) => (

@@ -13,11 +13,13 @@ const rotaryImages = ourwork.rotary
 const clubeventImages = ourwork.clubevents
 const collabImages = ourwork.collaborations
 const responsive = [
-  { breakPoint: 1280, cardsToShow: 4 },
-  { breakPoint: 760, cardsToShow: 2 },
-  { breakPoint: 420, cardsToShow: 1 },
+  // { breakPoint: 1024, cardsToShow: 4 }, // this will be applied if screen size is greater than 1280px. cardsToShow will become 4.
+  { breakPoint: 850, cardsToShow: 3 },
+  { breakPoint: 420, cardsToShow: 2 },
+  { breakPoint: 0, cardsToShow: 1 },
 ]
 const fullwork = () => {
+  let pathname = typeof window !== "undefined" ? window.location.pathname : ""
   return (
     <div>
       <Header />
@@ -32,7 +34,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={window.matchMedia("(max-width: 850px)").matches}
+          showArrows={pathname.matchMedia("(max-width: 850px)").matches}
           autoSlide={true}
         >
           {installationImages.map((image, index) => (
