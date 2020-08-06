@@ -19,7 +19,10 @@ const responsive = [
   { breakPoint: 0, cardsToShow: 1 },
 ]
 const fullwork = () => {
-  let pathname = typeof window !== "undefined" ? window.location.pathname : ""
+  let pathname =
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width: 850px)").matches
+      : ""
   return (
     <div>
       <Header />
@@ -34,7 +37,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={pathname.matchMedia("(max-width: 850px)").matches}
+          showArrows={pathname}
           autoSlide={true}
         >
           {installationImages.map((image, index) => (
