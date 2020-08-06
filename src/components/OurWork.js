@@ -6,9 +6,10 @@ import { ourwork } from "../design/content.json"
 const sampleImages = ourwork.samplecollection
 const sampleImagesContent = ourwork.samplecollectioncontent
 const responsive = [
-  { breakPoint: 1280, cardsToShow: 3 }, // this will be applied if screen size is greater than 1280px. cardsToShow will become 4.
-  { breakPoint: 760, cardsToShow: 2 },
-  { breakPoint: 420, cardsToShow: 1 },
+  // { breakPoint: 1024, cardsToShow: 4 }, // this will be applied if screen size is greater than 1280px. cardsToShow will become 4.
+  { breakPoint: 850, cardsToShow: 3 },
+  { breakPoint: 420, cardsToShow: 2 },
+  { breakPoint: 0, cardsToShow: 1 },
 ]
 export const OurWork = () => {
   return (
@@ -19,7 +20,7 @@ export const OurWork = () => {
         responsive={responsive}
         infinite={true}
         pauseOnMouseOver={true}
-        showArrows={false}
+        showArrows={window.matchMedia("(max-width: 850px)").matches}
         autoSlide={true}
       >
         {sampleImages.map((image, index) => (

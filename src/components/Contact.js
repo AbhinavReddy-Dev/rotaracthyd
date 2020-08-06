@@ -46,7 +46,6 @@ export const Contact = () => {
             <span
               style={{
                 fontWeight: "300",
-                fontSize: "xx-large",
               }}
             >
               Let's work together in building a world of peace and abundance.

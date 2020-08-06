@@ -269,7 +269,7 @@ export const LandingImage = styled.section`
     .landingImg:after {
       display: none;
     }
-    height: 30rem;
+    height: 25rem;
     background: linear-gradient(155deg, #e9025a 0%, rgba(0, 109, 255, 1) 90%);
     opacity: 0.85;
   }
@@ -283,9 +283,7 @@ export const LandingContent = styled.section`
   transform: translateX(50%);
   color: #fff;
   text-align: center;
-  @media ${props => props.theme.mediaQuery.Tablet} {
-    padding: auto 0;
-  }
+
   .content-wrap {
     margin: 0 auto;
     width: 34%;
@@ -331,10 +329,33 @@ export const LandingContent = styled.section`
       width: 48%;
     }
   }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    padding: auto 1em;
+    width: 100%;
+    h1 {
+      margin: 2rem 1rem 1rem 1rem;
+      font-size: ${props => props.theme.fontSize.large};
+    }
+    h3 {
+      font-size: ${props => props.theme.fontSize.medium};
+    }
+    h4 {
+      font-size: ${props => props.theme.fontSize.small};
+    }
+    p {
+      font-size: ${props => props.theme.fontSize.xsmall};
+    }
+    .content-wrap {
+      width: 90%;
+    }
+  }
 `
 export const AboutSection = styled(SectionWrapper)`
   width: 100%;
   padding: 3rem 5%;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    padding: 3rem 5% 1rem 5%;
+  }
   background-color: ${props => props.theme.colors.bgColor};
   z-index: 2;
   text-align: center;
@@ -362,12 +383,18 @@ export const AboutSection = styled(SectionWrapper)`
     @media ${props => props.theme.mediaQuery.Laptop} {
       top: -12.8%;
     }
+    @media ${props => props.theme.mediaQuery.Tablet} {
+      top: -4.5%;
+    }
   }
 `
 export const AboutHeader = styled.div`
   text-align: center;
   p {
     margin-top: 2.2rem;
+    @media ${props => props.theme.mediaQuery.Tablet} {
+      margin-top: 1rem;
+    }
     font-weight: ${props => props.theme.fontWeight.light};
     color: ${props => props.theme.colors.primaryColor};
   }
@@ -391,6 +418,10 @@ export const OurGoalSection = styled(Container)`
   text-align: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
   h1 {
     word-spacing: 10px;
     text-transform: uppercase;
@@ -533,6 +564,9 @@ export const OurGoalCard = styled.div`
 export const OurTeamWrapper = styled(SectionWrapper)`
   width: 100%;
   padding: 6rem 5% 5rem 5%;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    padding: 3rem 5% 5rem 5%;
+  }
   border-bottom: solid 4px lightcoral;
   position: relative;
   h1 {
@@ -615,6 +649,9 @@ export const MemberCard = styled.div`
 export const OurWorkWrapper = styled(SectionWrapper)`
   width: 100%;
   padding: 5rem 7% 7rem 7%;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    padding: 3rem 5% 5rem 5%;
+  }
   border-bottom: solid 4px coral;
   h1,
   h3 {
@@ -652,15 +689,18 @@ export const OurWorkWrapper = styled(SectionWrapper)`
 `
 export const ImagesCarousel = styled(Slider)`
   margin: 2rem 0 1rem 0;
-  padding: 2rem 0.5rem;
-  background-color: #f2f2f2;
+  padding: 1rem 0.5rem;
+  background-color: whitesmoke;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    background-color: #1b6ca8;
+  }
   box-shadow: ${props => props.theme.boxShadowLite};
   img {
-    border-radius: 2.5em;
+    /* border-radius: 2.5em; */
     max-height: 22rem;
     max-width: 100%;
-    margin: auto 0rem;
-    padding: 2rem;
+    margin: auto;
+    padding: 0 2rem;
   }
 `
 export const Image = styled(ImageComponent)`
@@ -679,6 +719,10 @@ export const ContactSection = styled(Container)`
   border-bottom: solid 4px lightcoral;
   @media ${props => props.theme.mediaQuery.Tablet} {
     flex-direction: column;
+    padding: 3rem 0;
+    h1 {
+      margin-bottom: 0rem;
+    }
   }
 `
 export const ContactContent = styled.div`
@@ -688,7 +732,12 @@ export const ContactContent = styled.div`
     width: 55%;
   }
   @media ${props => props.theme.mediaQuery.Tablet} {
-    width: 80%;
+    width: 95%;
+    p {
+      span {
+        font-size: ${props => props.theme.fontSize.small};
+      }
+    }
   }
   p {
     line-height: 2em;
@@ -696,6 +745,13 @@ export const ContactContent = styled.div`
     span {
       line-height: 2.1em;
       border-bottom: 4px solid ${props => props.theme.colors.primaryColor};
+      font-size: ${props => props.theme.fontSize.xlarge};
+      @media ${props => props.theme.mediaQuery.Tablet} {
+        font-size: ${props => props.theme.fontSize.large};
+      }
+      @media ${props => props.theme.mediaQuery.Mobile} {
+        font-size: ${props => props.theme.fontSize.medium};
+      }
     }
   }
 `
@@ -715,7 +771,7 @@ export const ContactUsForm = styled.form`
     width: 35%;
   }
   @media ${props => props.theme.mediaQuery.Tablet} {
-    width: 70%;
+    width: 80%;
   }
   h3 {
     margin: 0 0 0.5rem 0;
@@ -805,6 +861,18 @@ export const FooterSection = styled.footer`
       margin-right: 1em;
     }
   }
+  @media ${props => props.theme.mediaQuery.Mobile} {
+    text-align: center;
+    margin: 0 5%;
+    width: 90%;
+    flex-wrap: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    video {
+      width: 13rem;
+      margin-right: 0;
+    }
+  }
   h4 {
     font-weight: ${props => props.theme.fontWeight.normal};
   }
@@ -825,6 +893,9 @@ export const SocialMedia = styled(Div)`
       width: 1rem;
     }
   }
+  @media ${props => props.theme.mediaQuery.Mobile} {
+    margin-top: 1rem;
+  }
 `
 export const RawMedia = styled(SocialMedia)`
   height: 7rem;
@@ -841,6 +912,9 @@ export const RawMedia = styled(SocialMedia)`
       font-size: ${props => props.theme.fontSize.xxsmall};
     }
   }
+  @media ${props => props.theme.mediaQuery.Mobile} {
+    margin-top: 1rem;
+  }
 `
 export const CopyRight = styled.p`
   margin: 0;
@@ -856,6 +930,9 @@ export const CopyRight = styled.p`
     :hover {
       color: ${props => props.theme.colors.primaryColor};
     }
+  }
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    font-size: ${props => props.theme.fontSize.xsmall};
   }
 `
 export const FooterJoinLink = styled(Link)`
@@ -886,9 +963,22 @@ export const FooterJoinLink = styled(Link)`
 export const JoinUsSection = styled(ContactSection)`
   padding-top: 8rem;
   align-items: flex-start;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    padding-top: 6rem;
+    width: 100%;
+    margin: 0 auto;
+  }
 `
-export const JoinUsContent = styled(ContactContent)``
-export const JoinUsForm = styled(ContactUsForm)``
+export const JoinUsContent = styled(ContactContent)`
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    margin: 0 auto;
+  }
+`
+export const JoinUsForm = styled(ContactUsForm)`
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    margin: 0 auto;
+  }
+`
 
 // ${props => props.theme.};
 

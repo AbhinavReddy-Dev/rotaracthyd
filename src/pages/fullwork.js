@@ -32,7 +32,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={false}
+          showArrows={window.matchMedia("(max-width: 850px)").matches}
           autoSlide={true}
         >
           {installationImages.map((image, index) => (
