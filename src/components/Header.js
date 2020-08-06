@@ -27,14 +27,31 @@ export const Header = () => {
   //   let windowPosition = window.scrollY > 0
   //   header.classList.toggle("scrolling-active", windowPosition)
   // })
+  // function navshrink() {
+  //   const resnav = document.querySelector(".res-nav")
+  //   if (resnav.style.animation === "slide-out 5s ease") {
+  //     // resnav.style.display = "flex"
+  //     resnav.style.animation = "slide 0.5s ease-in forwards"
+  //     // resnav.style.width = " 70% "
+  //   } else {
+  //     // resnav.style.width = " 0 "
+  //     resnav.style.animation = "slide-out 5s ease"
+  //     // resnav.style.display = "none"
+  //   }
+  // }
+
   function navshrink() {
     const resnav = document.querySelector(".res-nav")
     if (resnav.style.display === "none") {
       resnav.style.display = "flex"
+      resnav.style.animation = "slide 0.5s ease forwards"
     } else {
       resnav.style.display = "none"
+      // resnav.style.animation = "slide-out 5s ease"
     }
+    document.querySelector(".burger").classList.toggle("toggle")
   }
+
   return (
     <NavBar>
       <NavContent>
@@ -59,7 +76,7 @@ export const Header = () => {
           </NavLink>
         </NavLinks>
         <NavLinkJoin to="/JoinUs">join us!</NavLinkJoin>
-        <Burger onClick={() => navshrink()}>
+        <Burger className="burger" onClick={() => navshrink()}>
           <div className="line1"></div>
           <div className="line2"></div>
           <div className="line3"></div>

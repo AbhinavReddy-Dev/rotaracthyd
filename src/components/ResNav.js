@@ -8,6 +8,7 @@ export const ResNav = () => {
   function navShrink() {
     const resnav = document.querySelector(".res-nav")
     resnav.style.display = "none"
+    document.querySelector(".burger").classList.toggle("toggle")
   }
 
   return (

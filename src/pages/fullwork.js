@@ -58,7 +58,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={false}
+          showArrows={pathname}
           autoSlide={true}
         >
           {clubmeetImages.map((image, index) => (
@@ -78,7 +78,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={false}
+          showArrows={pathname}
           autoSlide={true}
         >
           {homevisitImages.map((image, index) => (
@@ -98,7 +98,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={false}
+          showArrows={pathname}
           autoSlide={true}
         >
           {communityImages.map((image, index) => (
@@ -118,7 +118,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={false}
+          showArrows={pathname}
           autoSlide={true}
         >
           {rotaryImages.map((image, index) => (
@@ -138,7 +138,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={false}
+          showArrows={pathname}
           autoSlide={true}
         >
           {clubeventImages.map((image, index) => (
@@ -158,7 +158,7 @@ const fullwork = () => {
           responsive={responsive}
           infinite={true}
           pauseOnMouseOver={true}
-          showArrows={false}
+          showArrows={pathname}
           autoSlide={true}
         >
           {collabImages.map((image, index) => (

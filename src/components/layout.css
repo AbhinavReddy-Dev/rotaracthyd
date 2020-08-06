@@ -621,3 +621,26 @@ pre tt:after {
     font-size: 100%;
   }
 }
+@keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+@keyframes slide-out {
+  from {
+    display: flex;
+  }
+  to {
+    display: none;
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

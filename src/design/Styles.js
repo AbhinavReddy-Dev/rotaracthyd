@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle, keyframes } from "styled-components"
 import { Link } from "gatsby"
 import Slider from "react-styled-carousel"
 import ImageComponent from "../components/WorkImages"
@@ -102,11 +102,13 @@ export const NavLinks = styled(NavContent)`
 `
 export const ResNavLinks = styled.div`
   display: none;
+  transition: 1s ease-in;
+
   @media ${props => props.theme.mediaQuery.Tablet} {
     position: fixed;
     margin: 0;
     background: ${props => props.theme.colors.secondaryColor};
-    right: 0;
+    right: -70%;
     top: 3.6rem;
     ${NavBar}.scrolling-active & {
       top: 3rem;
@@ -118,6 +120,7 @@ export const ResNavLinks = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease-in;
   }
 `
 
@@ -246,6 +249,7 @@ export const Burger = styled.div`
       ${NavBar}.scrolling-active & {
         background-color: ${props => props.theme.colors.primaryColor};
       }
+      transition: 0.3s ease-in;
     }
   }
 `
@@ -733,6 +737,8 @@ export const ContactContent = styled.div`
   }
   @media ${props => props.theme.mediaQuery.Tablet} {
     width: 95%;
+    padding: 0 1rem;
+
     p {
       span {
         font-size: ${props => props.theme.fontSize.small};
@@ -771,7 +777,7 @@ export const ContactUsForm = styled.form`
     width: 35%;
   }
   @media ${props => props.theme.mediaQuery.Tablet} {
-    width: 80%;
+    width: 90%;
   }
   h3 {
     margin: 0 0 0.5rem 0;
@@ -977,6 +983,15 @@ export const JoinUsContent = styled(ContactContent)`
 export const JoinUsForm = styled(ContactUsForm)`
   @media ${props => props.theme.mediaQuery.Tablet} {
     margin: 0 auto;
+    h3 {
+      /* width: 100%; */
+      margin: 0 0 0rem 0;
+      align-self: center;
+      padding: 1.5rem 0;
+      text-transform: uppercase;
+      font-size: ${props => props.theme.fontSize.medium};
+      word-spacing: 2px;
+    }
   }
 `
 
