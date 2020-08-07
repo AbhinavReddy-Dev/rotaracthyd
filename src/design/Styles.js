@@ -85,7 +85,27 @@ export const NavBar = styled.header`
     }
   }
 `
+export const Burger = styled.div`
+  display: none;
+  @media ${props => props.theme.mediaQuery.Tablet} {
+    flex-direction: column;
+    display: inherit;
+    margin-top: 7px;
+    div {
+      width: 25px;
+      height: 2.5px;
+      background-color: ${props => props.theme.colors.bgColor};
+      margin: 2px;
+      ${NavBar}.scrolling-active & {
+        background-color: ${props => props.theme.colors.primaryColor};
+      }
+      transition: 0.3s ease-in;
+    }
+  }
+`
 export const NavContent = styled(Container)`
+  /* width: 100%; */
+  /* padding: 0 5%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -102,25 +122,23 @@ export const NavLinks = styled(NavContent)`
 `
 export const ResNavLinks = styled.div`
   display: none;
-  transition: 1s ease-in;
-
   @media ${props => props.theme.mediaQuery.Tablet} {
     position: fixed;
     margin: 0;
     background: ${props => props.theme.colors.secondaryColor};
-    right: -70%;
+    right: 0;
     top: 3.6rem;
     ${NavBar}.scrolling-active & {
       top: 3rem;
       height: calc(100vh - 3rem);
     }
     height: calc(100vh - 3.6rem);
-    width: 70%;
-    display: none;
+    width: 0%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.3s ease-in;
+    transition: 0.5s;
   }
 `
 
@@ -161,8 +179,14 @@ export const NavLink = styled(Link)`
       font-weight: ${props => props.theme.fontWeight.normal};
     }
   }
+`
+export const ResNavLink = styled(NavLink)`
+  display: none;
+  transition: 0.5s ease;
+  margin-bottom: 2em;
+  width: 7rem;
+  text-align: center;
   @media ${props => props.theme.mediaQuery.Tablet} {
-    margin-bottom: 2em;
     ${NavBar}.scrolling-active & {
       font-size: ${props => props.theme.fontSize.small};
       color: ${props => props.theme.colors.bgColor};
@@ -211,9 +235,9 @@ export const NavLinkJoin = styled(NavLink)`
   }
 `
 export const NavLinkJoinMobile = styled(NavLinkJoin)`
-  @media ${props => props.theme.mediaQuery.Tablet} {
-    display: block;
-  }
+  transition: 0.6s;
+  width: 8rem;
+  text-align: center;
 `
 export const NavLogo = styled(Link)`
   transition: 1s ease-in-out;
@@ -235,24 +259,7 @@ export const NavLogo = styled(Link)`
     }
   }
 `
-export const Burger = styled.div`
-  display: none;
-  @media ${props => props.theme.mediaQuery.Tablet} {
-    flex-direction: column;
-    display: inherit;
-    margin-top: 7px;
-    div {
-      width: 25px;
-      height: 2.5px;
-      background-color: ${props => props.theme.colors.bgColor};
-      margin: 2px;
-      ${NavBar}.scrolling-active & {
-        background-color: ${props => props.theme.colors.primaryColor};
-      }
-      transition: 0.3s ease-in;
-    }
-  }
-`
+
 export const LandingImage = styled.section`
   position: relative;
   .landingImg img {
@@ -338,7 +345,7 @@ export const LandingContent = styled.section`
     width: 100%;
     h1 {
       margin: 2rem 1rem 1rem 1rem;
-      font-size: ${props => props.theme.fontSize.large};
+      font-size: 2em;
     }
     h3 {
       font-size: ${props => props.theme.fontSize.medium};
@@ -385,7 +392,7 @@ export const AboutSection = styled(SectionWrapper)`
     max-height: 5rem;
     max-width: 5rem;
     @media ${props => props.theme.mediaQuery.Laptop} {
-      top: -12.8%;
+      top: -8%;
     }
     @media ${props => props.theme.mediaQuery.Tablet} {
       top: -4.5%;
@@ -938,7 +945,7 @@ export const CopyRight = styled.p`
     }
   }
   @media ${props => props.theme.mediaQuery.Tablet} {
-    font-size: ${props => props.theme.fontSize.xsmall};
+    font-size: ${props => props.theme.fontSize.xxsmall};
   }
 `
 export const FooterJoinLink = styled(Link)`

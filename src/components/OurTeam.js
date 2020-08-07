@@ -9,8 +9,6 @@ import {
 import Image from "./ProfileImages"
 import { team } from "../design/content.json"
 
-// team.map(mem => console.log(mem.name, mem.photo))
-
 export const OurTeam = () => {
   return (
     <OurTeamWrapper id="ourteam" bgcolor="#13beaa">
@@ -27,6 +25,7 @@ export const OurTeam = () => {
               <Image
                 alt={mem.name}
                 filename={mem.photo ? mem.photo : "rotarylogo.png"}
+                loading="lazy"
               />
               <Div margin="auto 0">
                 <h4>Rtr. {mem.name}</h4>

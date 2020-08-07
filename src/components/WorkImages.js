@@ -33,6 +33,7 @@ const WorkImages = props => (
           alt={props.alt}
           //   fluid={image.node.childImageSharp.fluid}
           src={image.node.publicURL}
+          loading="lazy"
         />
       )
     }}

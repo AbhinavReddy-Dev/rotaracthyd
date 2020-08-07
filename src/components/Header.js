@@ -1,7 +1,5 @@
-// import PropTypes from “prop-types”
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-// import Img from “gatsby-image”
 
 import {
   NavBar,
@@ -22,41 +20,36 @@ export const Header = () => {
       }
     }
   `)
-  // window.addEventListener("scroll", function () {
-  //   let header = document.querySelector("header")
-  //   let windowPosition = window.scrollY > 0
-  //   header.classList.toggle("scrolling-active", windowPosition)
-  // })
-  // function navshrink() {
-  //   const resnav = document.querySelector(".res-nav")
-  //   if (resnav.style.animation === "slide-out 5s ease") {
-  //     // resnav.style.display = "flex"
-  //     resnav.style.animation = "slide 0.5s ease-in forwards"
-  //     // resnav.style.width = " 70% "
-  //   } else {
-  //     // resnav.style.width = " 0 "
-  //     resnav.style.animation = "slide-out 5s ease"
-  //     // resnav.style.display = "none"
-  //   }
-  // }
 
   function navshrink() {
     const resnav = document.querySelector(".res-nav")
-    if (resnav.style.display === "none") {
-      resnav.style.display = "flex"
-      resnav.style.animation = "slide 0.5s ease forwards"
-    } else {
-      resnav.style.display = "none"
-      // resnav.style.animation = "slide-out 5s ease"
-    }
     document.querySelector(".burger").classList.toggle("toggle")
+    if (resnav.style.width === "70%") {
+      resnav.style.width = "0%"
+      for (var i = 0; i < resnav.childNodes.length; i++) {
+        if (resnav.childNodes[i].nodeName.toLowerCase() == "a") {
+          resnav.childNodes[i].style.display = "none"
+        }
+      }
+    } else {
+      resnav.style.width = "70%"
+      for (var i = 0; i < resnav.childNodes.length; i++) {
+        if (resnav.childNodes[i].nodeName.toLowerCase() == "a") {
+          resnav.childNodes[i].style.display = "block"
+        }
+      }
+    }
   }
 
   return (
     <NavBar>
       <NavContent>
         <NavLogo to="/">
-          <img src={pinkLogo.pinklogo.publicURL} alt="pinkClubLogo" />
+          <img
+            src={pinkLogo.pinklogo.publicURL}
+            alt="pinkClubLogo"
+            loading="lazy"
+          />
         </NavLogo>
         <NavLinks>
           <NavLink className="about" to="/#about" activeClassName="active">
@@ -86,13 +79,3 @@ export const Header = () => {
     </NavBar>
   )
 }
-
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
-
-// export default Header

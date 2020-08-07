@@ -34,6 +34,7 @@ export const OurWork = () => {
               alt={String(image)}
               filename={image}
               content={sampleImagesContent}
+              loading="lazy"
             />
           </Div>
         ))}
