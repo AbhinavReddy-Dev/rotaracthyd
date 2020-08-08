@@ -35,6 +35,14 @@ export const Container = styled.section`
   position: relative;
   height: ${props => props.height};
   padding: ${props => props.padding};
+  background-color: ${props => props.bgcolor};
+  display: ${props => props.display};
+  flex-direction: ${props => props.flexDirection};
+  flex-wrap: ${props => props.flexWrap};
+  background: ${props => props.background};
+  justify-content: ${props => props.justifyContent};
+  align-items: ${props => props.alignItems};
+  text-align: ${props => props.textAlign};
 `
 export const SectionWrapper = styled.div`
   background-color: ${props => props.bgcolor};
@@ -63,6 +71,8 @@ export const Div = styled.div`
   margin: ${props => props.margin};
   align-content: ${props => props.alignContent};
   align-items: ${props => props.alignItems};
+  @media ${props => props.theme.mediaQuery.Tablet} {
+  }
 `
 export const NavBar = styled.header`
   width: 100%;
@@ -138,7 +148,7 @@ export const ResNavLinks = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
+    transition: 0.4s;
   }
 `
 
@@ -235,7 +245,7 @@ export const NavLinkJoin = styled(NavLink)`
   }
 `
 export const NavLinkJoinMobile = styled(NavLinkJoin)`
-  transition: 0.6s;
+  transition: 1s;
   width: 8rem;
   text-align: center;
 `

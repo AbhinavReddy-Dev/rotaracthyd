@@ -6,17 +6,23 @@ import SEO from "../components/seo"
 const SuccessPage = () => (
   <Layout>
     <SEO title="200: Success" />
-    <SectionWrapper
-      bgcolor="#fe91ca"
-      display="flex"
-      flexWrap="wrap"
-      textAlign="center"
-    >
-      <Container height="70vh" padding="6rem">
-        <Div margin="2rem">
-          <br></br>
-          <br></br>
-          <h1>Yaaay...!🎉 Your submission was successful</h1>
+    <SectionWrapper bgcolor="#fe91ca" display="flex" textAlign="center">
+      <Container
+        height="90vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Div
+          margin="50% 3%"
+          style={{
+            color: "white",
+          }}
+        >
+          <h1 style={{ textTransform: "uppercase" }}>
+            Yaaay...! 🎉 Your submission was successful
+          </h1>
+          <br />
           <p>Please wait for us to respond, it will usually take 24 hours.</p>
         </Div>
       </Container>
