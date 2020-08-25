@@ -157,7 +157,7 @@ const JoinUs = () => {
               />
             </label>
             <label htmlFor="expectations">
-              What do you expect from us?
+              What do you expect to learn while serving the society?
               <textarea
                 id="expectations"
                 name="expectations"
